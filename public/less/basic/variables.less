@@ -1,0 +1,120 @@
+//color
+@gray-darker:            #000;
+@gray-dark:              #333;
+@gray:                   #666;
+@gray-light:             #999;
+@gray-lighter:           #eee;
+
+
+	
+@theme-dark:             #4d0e68;
+@theme:                  #397300;
+@theme-light:            #f47898;
+
+@highlight:              #b00;
+@highlight-light:        #c00;
+@highlight-lighter:      #d00;
+@highlight-lightest:     #f00;
+
+@red: 					 #d00;
+@green: 			     #397300;
+@yellow: 			     #b25501;
+@blue: 					 #00f;
+
+// Scaffolding
+@body-bg:                #fff;
+@text-color:             @gray-dark;
+
+// Links
+@link-color:             @gray-dark;
+@link-hover-color:       @theme;
+
+// Typography
+@font-family-sans-serif:  Arial,Helvetica,Verdana,"Lucida Grande","Lucida Sans Unicode",sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-helvetica:   "Helvetica Neue",Helvetica,Arial,sans-serif;
+@font-family-verdana:     Verdana, '\5b8b\4f53', Geneva, sans-serif;
+@font-family-base:        @font-family-verdana;
+
+@font-size-base:          12px;
+@font-size-large:         ceil(@font-size-base * 1.15); // ~14px
+@font-size-small:         ceil(@font-size-base * 0.9); // ~11px
+
+@line-height-base:        150%;
+
+// Border
+@border-color:            #ddd;
+
+//wrap containner width
+@screen-width:            960px;
+
+//border radius:
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.border-shadow(@reg){
+    -webkit-box-shadow: @reg;
+       -moz-box-shadow: @reg;
+        -ms-box-shadow: @reg;
+            box-shadow: @reg;    
+}
+.box-shadow(@reg){
+    -webkit-box-shadow: @reg;
+       -moz-box-shadow: @reg;
+        -ms-box-shadow: @reg;
+            box-shadow: @reg;    
+}
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+          transition: @transition;
+}
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio); // IE9+
+      -ms-transform: scale(@ratio); // IE9+
+          transform: scale(@ratio);
+}
+.translate3d(@x; @y; @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+          transform: translate3d(@x, @y, @z);
+}
+.transform-origin(@origin) {
+  -webkit-transform-origin: @origin;
+     -moz-transform-origin: @origin;
+          transform-origin: @origin;
+}
+.backface-visibility(@visibility){
+  -webkit-backface-visibility: @visibility;
+     -moz-backface-visibility: @visibility;
+          backface-visibility: @visibility;
+}
+.opacity(@opacity) {
+    opacity: @opacity;
+    // IE8 filter
+    @opacity-ie: (@opacity * 100);
+    filter: ~"alpha(opacity=@{opacity-ie})";
+}
+.background-size(@size) {
+    -webkit-background-size:@size;
+       -moz-background-size:@size;
+         -o-background-size:@size;
+            background-size:@size;
+}
+.background-clip(@reg){
+   -webkit-background-clip: @reg;
+      -moz-background-clip: @reg;
+           background-clip: @reg;
+}
+.genVer() {
+    @last_v : `'?'+Math.round(new Date().getTime()/1000).toString().substr(1)`;
+} .genVer();
+
+.container() {
+    width:@screen-width; margin-left:auto; margin-right:auto; clear: both;
+}
