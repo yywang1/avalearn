@@ -38,7 +38,7 @@ class UploadProcessor implements BaseProcessor {
 	}
 	
 	public function insertFile($container, $file) {
-		if(! $this->moveFile($container['APP_PATH'], $file)) {
+		if(! $this->moveFile($container['PHP_PATH'], $file)) {
 			return false;
 		}
 		$filedao = $container['filedao'];
@@ -150,7 +150,7 @@ class UploadProcessor implements BaseProcessor {
 				} else {
 					$attaInfo = $this->verifyFile($container['filedao'], $attachment["name"]);
 					if($attaInfo['code'] === 0) {
-						$tempPath = $container['APP_PATH'] . 'temp/' . $attaInfo['bname'] . ' by ' . $attaInfo['bauthor'] . '.' . $attaInfo['bformat'];
+						$tempPath = $container['PHP_PATH'] . 'temp/' . $attaInfo['bname'] . ' by ' . $attaInfo['bauthor'] . '.' . $attaInfo['bformat'];
 						move_uploaded_file($attachment["tmp_name"], toGb($tempPath));
 						$result = array(
 							'code' => 0,

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/config.env.php';
+require_once dirname(__DIR__) . '/includes/config.env.php';
 
 // encoding
 header("Content-type: text/html; Charset=utf-8");
@@ -27,11 +27,11 @@ session_start();
 error_reporting($DEBUG_MODE ? E_ALL : E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 
 //Initializer
-require_once __DIR__ . '../../vender/Pimple.php';
+require_once dirname(__DIR__) . '/vender/Pimple.php';
 $container = new Pimple();
 
-$container['ROOT_PATH'] = str_replace('app/includes/global.init.php', '', str_replace('\\', '/', __FILE__));
-$container['APP_PATH'] = $container['ROOT_PATH'] . 'app/';
+$container['ROOT_PATH'] = str_replace('\\', '/', dirname(dirname(__DIR__))) . '/';
+$container['PHP_PATH'] = $container['ROOT_PATH'] . 'php/';
 if ($_SERVER['DOCUMENT_ROOT'] != "") {
 	$WEB_ROOT = substr(realpath(dirname(__FILE__) . '/../'), strlen(realpath($_SERVER['DOCUMENT_ROOT'])));
 	if (trim($WEB_ROOT, '/\\')) {
@@ -44,7 +44,7 @@ if ($_SERVER['DOCUMENT_ROOT'] != "") {
 }
 $container['WEB_ROOT'] = $WEB_ROOT;
 
-require_once __DIR__ . '/Initializer.php';
+require_once dirname(__DIR__) . '/includes/Initializer.php';
 $baseinit = new Initializer();
 $container = $baseinit->initConf($container);
 $container = $baseinit->initPath($container);
@@ -53,7 +53,7 @@ $container = $baseinit->initVars($container);
 $container = $baseinit->initBase($container);
 
 //common functions
-require_once __DIR__ . '/global.func.php';
+require_once dirname(__DIR__) . '/includes/global.func.php';
 
 //variable for common parts of pages
 $tplArray = getTplArray($container);

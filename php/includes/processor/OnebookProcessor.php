@@ -14,7 +14,7 @@ class OnebookProcessor implements BaseProcessor {
 		$fileDao = $container['filedao'];
 		$file = $fileDao->getFileByBid($bid);
 		
-		$filePath = toGb($container['APP_PATH'] . $file['bpath']);
+		$filePath = toGb($container['PHP_PATH'] . $file['bpath']);
 		$content = file_get_contents($filePath);
 		$content = toUtf8($content);
 		$lines = explode("\r\n", $content);

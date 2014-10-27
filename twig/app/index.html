@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    {% include 'common/links.html' %}
+</head>
+
+<body id="homepage">
+    {% include 'common/header.html' %}
+
+    <div class="main clearfix">
+        {% for catKey, cat in resources %}
+        <div class="column" id="{{catKey}}">
+            <h2>{{cat['title']}}</h2>
+
+            {% if cat['plugin_shot']|length > 0 %}
+            <ul class="textlist nbor">
+                {% for page in cat['article'] %}
+                <li><a href="{{WEB_ROOT}}{{page['url']}}" target="_blank">{{page['title']}}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if cat['article']|length > 0 %}
+            <ul class="textlist">
+                {% for page in cat['article'] %}
+                <li><a href="{{WEB_ROOT}}{{page['url']}}" target="_blank">{{page['title']}}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if cat['plugin']|length > 0 %}
+            <ul class="textlist">
+                {% for page in cat['article'] %}
+                <li><a href="{{WEB_ROOT}}{{page['url']}}" target="_blank">{{page['title']}}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    {% include 'common/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "javascript": {
+        "title": "Javascript",
+        "article": [
+            {
+                "pageId": "1",
+                "title": "获取鼠标坐标"
+            },
+            {
+                "pageId": "2",
+                "title": "获取各种宽高及距离"
+            }
+        ],
+        "plugin": [
+            {
+                "title": "HTML转义",
+                "pageId": "htmlEscape"
+            }
+        ]
+    }
+}

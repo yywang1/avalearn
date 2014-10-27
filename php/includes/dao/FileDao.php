@@ -138,7 +138,7 @@ class FileDao extends BaseDao{
 		$file = $this->getBooksByBid($bid);
 		if(! empty($file)) {
 			$container = $this->container;
-			$disk_path = $container['APP_PATH'] . 'files/' . $file['bauthor'] . '/' . $file['bname'] . ' by ' . $file['bauthor'] . '.' . $file['bformat'];
+			$disk_path = $container['PHP_PATH'] . 'files/' . $file['bauthor'] . '/' . $file['bname'] . ' by ' . $file['bauthor'] . '.' . $file['bformat'];
 			$disk_path = toGb($disk_path);
 			if(file_exists($disk_path)) {
 				unlink($disk_path);
