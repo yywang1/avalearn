@@ -363,6 +363,7 @@ body {
   width: 164px;
   height: 164px;
   padding: 1px;
+  vertical-align: top;
 }
 .imglist a:hover {
   text-decoration: none;

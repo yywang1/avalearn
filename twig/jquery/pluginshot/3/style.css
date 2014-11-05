@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*tab页*/
+.tab { width:400px; margin:auto; }
+.tabTit { height:30px; overflow:hidden; background:url(../../../examples/line.gif) repeat-x 0 29px; border-left:solid 1px #285000; }
+.tabTit li { float:left; height:28px; line-height:28px; overflow:hidden; cursor:pointer; padding:0 20px; background:#3e7b00; border-top:solid 1px #285000; border-right:solid 1px #285000; color:#fff; }
+.tabTit .hov { background:#285000; }
+.tabTit .cur { cursor:default; background:#fff; border-bottom:solid 1px #fff; color:#000; }
+.tabCont { clear:both; border:solid 1px #285000; border-top:none; }
+.tabCont_c { text-align:center; line-height:200px; }

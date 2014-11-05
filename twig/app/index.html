@@ -12,10 +12,20 @@
         <div class="column" id="{{catKey}}">
             <h2>{{cat['title']}}</h2>
 
-            {% if cat['plugin_shot']|length > 0 %}
-            <ul class="textlist nbor">
-                {% for page in cat['article'] %}
-                <li><a href="{{WEB_ROOT}}{{page['url']}}" target="_blank">{{page['title']}}</a></li>
+            {% if cat['pluginshot']|length > 0 %}
+            <ul class="imglist">
+                {% for page in cat['pluginshot'] %}
+                <li>
+                    <a href="{{WEB_ROOT}}pluginshot.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
+                        <img src="{{page['effect']}}" alt="查看详细">
+                        <span>
+                            {% if page['status'] %}
+                                [{{page['status']}}]
+                            {% endif %}
+                            {{page['title']}}
+                        </span>
+                    </a>
+                </li>
                 {% endfor %}
             </ul>
             {% endif %}
@@ -23,20 +33,42 @@
             {% if cat['article']|length > 0 %}
             <ul class="textlist">
                 {% for page in cat['article'] %}
-                <li><a href="{{WEB_ROOT}}{{page['url']}}" target="_blank">{{page['title']}}</a></li>
+                <li>
+                    {% if page['status'] %}
+                    <span>[{{page['status']}}]</span>
+                    {% endif %}
+                    <a href="{{WEB_ROOT}}article.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">{{page['title']}}</a>
+                </li>
                 {% endfor %}
             </ul>
             {% endif %}
 
             {% if cat['plugin']|length > 0 %}
             <ul class="textlist">
-                {% for page in cat['article'] %}
-                <li><a href="{{WEB_ROOT}}{{page['url']}}" target="_blank">{{page['title']}}</a></li>
+                {% for page in cat['plugin'] %}
+                <li>
+                    {% if page['status'] %}
+                    <span>[{{page['status']}}]</span>
+                    {% endif %}
+                    <a href="{{WEB_ROOT}}plugin.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">{{page['title']}}</a>
+                </li>
                 {% endfor %}
             </ul>
             {% endif %}
         </div>
         {% endfor %}
+
+        <div class="friendlink">
+            <h2>常用素材网站</h2>
+            <ul>
+                <li><a href="http://www.zcool.com.cn/" target="_blank">站酷（ZCOOL）</a></li>
+                <li><a href="http://www.lanrentuku.com/" target="_blank">懒人图库</a></li>
+                <li><a href="http://www.mypsd.com.cn/" target="_blank">蚂蚁图库</a></li>
+                <li><a href="http://www.poluoluo.com/" target="_blank">破洛洛</a></li>
+                <li><a href="http://www.freeimages.com/" target="_blank">freeimages</a></li>
+            </ul>
+        </div>
+
     </div>
 
     {% include 'common/footer.html' %}

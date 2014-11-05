@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片播放</title>
+<link rel="shortcut icon" href="http://avaforvr.one.zcyj.info/favicon.ico">
+<link type="text/css" rel="stylesheet" href="../../../global.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="../../../jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="imgPlay.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".imgPlay").imgPlay();
+	})
+</script>
+</head>
+
+<body id="modules">
+<div class="wrapper">
+    <iframe width="960" align="center" height="125" frameborder="0" scrolling="no" src="../../../header2.html"></iframe>
+    <div class="main">
+        <h1>图片播放</h1>
+        <div class="column">
+            <h2>效果展示</h2>
+            <div class="column_c mt3">
+                <div class="imgPlay">
+                    <ul class="imgList">
+                        <li><img src="../../../examples/pic1.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic2.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic3.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic4.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic5.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic6.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic7.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic8.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic1.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic2.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic3.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic4.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic5.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic6.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic7.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic8.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic1.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic2.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic3.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic4.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic5.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic6.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic7.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic8.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic1.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic2.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic3.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic4.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic5.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic6.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic7.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic8.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic1.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic2.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic3.jpg" alt="示例图片" /></li>
+                        <li><img src="../../../examples/pic4.jpg" alt="示例图片" /></li>
+                    </ul>
+                    <div class="imgDt">
+                        <div class="imgCopy">
+                        </div>
+                        <div class="imgDec">
+                            <div class="c1">
+                                <strong>图片标题</strong><br />
+                                图片描述图片描述图片描述图片描述图片描述图片描述
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column mt4">
+            <h2>代码展示</h2>
+            <div class="column_c">
+                <h3>HTML</h3>
+                <pre>&lt;div class=&quot;imgPlay&quot;&gt;
+    &lt;ul class=&quot;imgList&quot;&gt;
+        &lt;li&gt;&lt;img src=&quot;../../../examples/pic1.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;imgDt&quot;&gt;
+        &lt;div class=&quot;imgCopy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;imgDec&quot;&gt;&lt;div class=&quot;c1&quot;&gt;&lt;strong&gt;图片标题&lt;/strong&gt;&lt;br /&gt;图片描述图片描述图片描述图片描述图片描述图片描述&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                <h3>CSS</h3>
+                <pre>.imgPlay { width:600px; height:450px; overflow:hidden; border:solid 3px #666; position:relative; margin:0 auto; }/*图片展示*/
+.imgPlay .imgList { width:100%; float:left; }
+.imgPlay .imgList li { width:100px; height:75px; overflow:hidden; float:left; position:relative; cursor:pointer; }
+.imgPlay .imgList img { width:100%; height:100%; }
+.imgPlay .imgDt { width:100%; height:100%; background:url(../../../images/translucent.png) repeat; position:absolute; left:0; top:0; }
+.imgPlay .imgCopy { width:100px; height:75px; overflow:hidden; border:solid 3px #fff; position:absolute; left:0; top:0; }
+.imgPlay .imgCopy img { width:100px; height:75px; }
+.imgPlay .imgDec { width:400px; height:450px; overflow:hidden; background:#fff; position:absolute; left:103px; top:0; }
+.imgPlay .imgDec .c1 { width:360px; padding:10px 20px; }</pre>
+                <h3>JS</h3>
+                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.6.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;imgPlay.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(document).ready(function(){
+        $(&quot;.imgPlay&quot;).imgPlay();
+    })
+&lt;/script&gt;</pre>
+            </div>
+        </div>
+        <div class="column mt4">
+            <h2>相关文件下载</h2>
+            <ul class="download">
+                <li>jquery基本包<a href="../../../jquery-1.6.1.min.js" target="_blank">jquery-1.6.1.min.js</a></li>
+                <li>图片播放js<a href="imgPlay.js" target="_blank">imgPlay.js</a></li>
+            </ul>
+        </div>
+        <div class="column mt4">
+            <h2>要点总结</h2>
+            <ul class="summary">
+                <li>图片缩放根据实际需要选择函数，可参考图片等比缩放特效。</li>
+            </ul>
+        </div>
+    </div>
+    <iframe width="960" align="center" height="47" frameborder="0" scrolling="no" src="../../../footer.html"></iframe>
+</div>
+</body>
+</html>

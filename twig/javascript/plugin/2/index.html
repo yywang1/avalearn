@@ -1,0 +1,86 @@
+<h1>问候语+时钟</h1>
+<div class="column">
+    <h2>效果展示</h2>
+    <div class="column_c mt3">
+        <div id="date"></div>
+        <script>
+            function myGetDate() {
+                var date = new Date(); //创建Date()对象
+                var week = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"); //创建星期数组
+                var now = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日 " + week[date.getDay()] + " " + date.getHours() + "时" + date.getMinutes() + "分" + date.getSeconds() + "秒";
+                var greet; //问候语
+                var hour = date.getHours();
+                if (hour < 6) {
+                    greet = "凌晨好！"
+                } else if (hour < 9) {
+                    greet = "早上好！";
+                } else if (hour < 12) {
+                    greet = "上午好！";
+                } else if (hour < 14) {
+                    greet = "中午好！";
+                } else if (hour < 17) {
+                    greet = "下午好！";
+                } else if (hour < 19) {
+                    greet = "傍晚好！";
+                } else if (hour < 22) {
+                    greet = "晚上好！";
+                } else {
+                    greet = "夜里好！";
+                }
+
+                document.getElementById("date").innerHTML = greet + "现在是 " + now;
+                var autoTimer = setTimeout(myGetDate, 1000);
+            }
+            window.onload = myGetDate;
+        </script>
+    </div>
+</div>
+<div class="column mt4">
+    <h2>代码展示</h2>
+    <div class="column_c">
+        <h3>HTML</h3>
+        <pre>&lt;div id=&quot;date&quot;&gt;&lt;/div&gt;</pre>
+        <h3>JS</h3>
+        <pre>&lt;script type=&quot;text/javascript&quot;&gt;
+function myGetDate() {
+var date = new Date();    //创建Date()对象
+var week = new Array(&quot;星期日&quot;, &quot;星期一&quot;, &quot;星期二&quot;, &quot;星期三&quot;, &quot;星期四&quot;, &quot;星期五&quot;, &quot;星期六&quot;); //创建星期数组
+var now = date.getFullYear() + &quot;年&quot;
+        + (date.getMonth() + 1) + &quot;月&quot;
+        + date.getDate() + &quot;日 &quot;
+        + week[date.getDay()] + &quot; &quot;
+        + date.getHours() + &quot;时&quot;
+        + date.getMinutes() + &quot;分&quot;
+        + date.getSeconds() + &quot;秒&quot;;
+var greet;    //问候语
+var hour = date.getHours();
+if (hour &lt; 6) {
+    greet = &quot;凌晨好！&quot;
+} else if (hour &lt; 9) {
+    greet = &quot;早上好！&quot;;
+} else if (hour &lt; 12) {
+    greet = &quot;上午好！&quot;;
+} else if (hour &lt; 14) {
+    greet = &quot;中午好！&quot;;
+} else if (hour &lt; 17) {
+    greet = &quot;下午好！&quot;;
+} else if (hour &lt; 19) {
+    greet = &quot;傍晚好！&quot;;
+} else if (hour &lt; 22) {
+    greet = &quot;晚上好！&quot;;
+} else {
+    greet = &quot;夜里好！&quot;;
+}
+document.getElementById(&quot;date&quot;).innerHTML = greet + &quot;现在是 &quot; + now;
+var autoTimer = setTimeout(myGetDate, 1000);
+}
+window.onload = myGetDate;
+&lt;/script&gt;</pre>
+    </div>
+</div>
+<div class="column mt4">
+    <h2>要点总结</h2>
+    <ul class="summary">
+        <li>date.getMonth() 获取的月份为0-11，加1为当前月份。</li>
+    </ul>
+</div>

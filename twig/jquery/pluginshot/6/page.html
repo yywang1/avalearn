@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>带按钮的滚动</title>
+<link rel="shortcut icon" href="http://avaforvr.one.zcyj.info/favicon.ico">
+<link type="text/css" rel="stylesheet" href="../../../global.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="../../../jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="scrollLR1.js"></script>
+<script type="text/javascript" src="scrollLR2.js"></script>
+<script type="text/javascript" src="scrollTB1.js"></script>
+<script type="text/javascript" src="scrollTB2.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".scrollLR1").scrollLR1();//unitS: 每个li所占的宽度或高度  speed: 滚动速度
+		$(".scrollLR2").scrollLR2();
+		$(".scrollTB1").scrollTB1();
+		$(".scrollTB2").scrollTB2();
+	})
+</script>
+</head>
+
+<body id="modules">
+<div class="wrapper">
+    <iframe width="960" align="center" height="125" frameborder="0" scrolling="no" src="../../../header2.html"></iframe>
+    <div class="main">
+        <h1>带按钮的滚动</h1>
+        <div class="column">
+            <h2>效果展示</h2>
+            <div class="column_c mt3">
+                <!--横向滚动1-->
+                <div class="scrollLR scrollLR1">
+                    <div class="scrollWrap">
+                        <div class="scrollIn">
+                            <ul class="ulCont">
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic1.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic2.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic3.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic4.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic5.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic6.jpg" alt="示例图片" /></a></li>
+                            </ul>
+                            <ul class="ulCopy">
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="btnLeft">&nbsp;</a><a href="javascript:void(0)" class="btnRight">&nbsp;</a>
+                </div>
+                <!--横向滚动2-->
+                <div class="scrollLR scrollLR2">
+                    <div class="scrollWrap">
+                        <ul class="scrollIn">
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic1.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic2.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic3.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic4.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic5.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic6.jpg" alt="示例图片" /></a></li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="btnLeft">&nbsp;</a><a href="javascript:void(0)" class="btnRight">&nbsp;</a>
+                </div>
+                <!--纵向滚动1-->
+                <div class="scrollTB scrollTB1">
+                    <div class="scrollWrap">
+                        <div class="scrollIn">
+                            <ul class="ulCont">
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic1.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic2.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic3.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic4.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic5.jpg" alt="示例图片" /></a></li>
+                                <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic6.jpg" alt="示例图片" /></a></li>
+                            </ul>
+                            <ul class="ulCopy">
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="btnTop">&nbsp;</a><a href="javascript:void(0)" class="btnBot">&nbsp;</a>
+                </div>
+                <!--纵向滚动2-->
+                <div class="scrollTB scrollTB2">
+                    <div class="scrollWrap">
+                        <ul class="scrollIn">
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic1.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic2.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic3.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic4.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic5.jpg" alt="示例图片" /></a></li>
+                            <li><a href="http://www.baidu.com/" target="_blank"><img src="../../../examples/pic6.jpg" alt="示例图片" /></a></li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="btnTop">&nbsp;</a><a href="javascript:void(0)" class="btnBot">&nbsp;</a>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="column mt4">
+            <h2>代码展示</h2>
+            <div class="column_c">
+            	<h3>HTML</h3>
+                <pre>&lt;!--横向滚动1--&gt;
+&lt;div class=&quot;scrollLR scrollLR1&quot;&gt;
+    &lt;div class=&quot;scrollWrap&quot;&gt;
+        &lt;div class=&quot;scrollIn&quot;&gt;
+            &lt;ul class=&quot;ulCont&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;http://www.baidu.com/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;../../../examples/pic1.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;http://www.baidu.com/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;../../../examples/pic2.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class=&quot;ulCopy&quot;&gt;&lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;btnLeft&quot;&gt;&amp;nbsp;&lt;/a&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;btnRight&quot;&gt;&amp;nbsp;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--横向滚动2--&gt;
+&lt;div class=&quot;scrollLR scrollLR2&quot;&gt;
+    &lt;div class=&quot;scrollWrap&quot;&gt;
+        &lt;ul class=&quot;scrollIn&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.baidu.com/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;../../../examples/pic1.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.baidu.com/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;../../../examples/pic2.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;btnLeft&quot;&gt;&amp;nbsp;&lt;/a&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;btnRight&quot;&gt;&amp;nbsp;&lt;/a&gt;
+&lt;/div&gt;</pre>
+            	<p class="note">以横向滚动1和横向滚动2为例</p>
+                <h3>CSS</h3>
+                <pre>/*按钮*/
+.btnLeft, .btnRight { display:block; width:16px; height:31px; overflow:hidden; text-decoration:-1000px; background:url(../../../images/btn.gif) no-repeat; }
+.btnLeft { background-position:0 0; }
+.btnRight { background-position:0 -33px; }
+.btnTop, .btnBot { display:block; width:31px; height:16px; overflow:hidden; text-decoration:-1000px; background:url(../../../images/btn.gif) no-repeat; }
+.btnTop { background-position:0 -66px; }
+.btnBot { background-position:0 -84px; }
+
+/*横向滚动*/
+.scrollLR { background:#397300; padding:7px 33px; float:left; width:736px; position:relative; margin-bottom:10px; }
+.scrollLR .btnLeft { position:absolute; top:59px; left:7px; }
+.scrollLR .btnRight { position:absolute; top:59px; right:7px; }
+.scrollLR .noAvail { filter:alpha(opacity=30); opacity: 0.3; cursor:default; }
+.scrollLR .scrollWrap { float:left; overflow:hidden; width:736px; height:134px; background:#ccc; }
+.scrollLR .scrollIn { float:left; }
+.scrollLR .ulCont { float:left; }
+.scrollLR .ulCopy { float:left; }
+.scrollLR li { float:left; width:178px; padding:0 3px; }
+.scrollLR img { width:178px; height:134px; vertical-align:bottom; }
+
+/*纵向滚动*/
+.scrollTB { background:#397300; padding:33px 7px; float:left; width:178px; height:420px; position:relative; margin-right:10px; }
+.scrollTB .btnTop { position:absolute; top:7px; left:74px; }
+.scrollTB .btnBot { position:absolute; bottom:7px; left:74px; }
+.scrollTB .noAvail { filter:alpha(opacity=30); opacity: 0.3; cursor:default; }
+.scrollTB .scrollWrap { overflow:hidden; width:178px; height:420px; background:#ccc; }
+.scrollTB li { height:134px; padding:3px 0; }
+.scrollTB img { width:178px; height:134px; vertical-align:bottom; }</pre>
+            	<h3>JS</h3>
+                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.6.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;scrollLR1.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function(){
+		$(&quot;.scrollLR1&quot;).scrollLR1();
+	})
+&lt;/script&gt;</pre>
+            	<p class="note">以横向滚动1为例，其它基本相同</p>
+            </div>
+        </div>
+        <div class="column mt4">
+            <h2>相关文件下载</h2>
+            <ul class="download">
+            	<li>jquery基本包<a href="../../../jquery-1.6.1.min.js" target="_blank">jquery-1.6.1.min.js</a></li>
+                <li>横向滚动1<a href="scrollLR1.js" target="_blank">scrollLR1.js</a></li>
+                <li>横向滚动2<a href="scrollLR2.js" target="_blank">scrollLR2.js</a></li>
+                <li>纵向滚动1<a href="scrollTB1.js" target="_blank">scrollTB1.js</a></li>
+                <li>纵向滚动2<a href="scrollTB2.js" target="_blank">scrollTB2.js</a></li>
+            </ul>
+        </div>
+        <div class="column mt4">
+            <h2>要点总结</h2>
+            <ul class="summary">
+            	<li>以上横向滚动1和纵向滚动1的js代码原理是：将ulCont中的代码复制到ulCopy中，scrollIn开始滚动；当 ulCopy的最后一个标签完全进入可见区域时，scrollIn跳到ulCont 的最后一个标签完全进入可见区域的位置。</li>
+            	<li><span class="fc4">ulCopy</span>的使用；</li>
+            	<li><span class="fc4">滚动距离关键点</span>的判断。</li>
+            </ul>
+        </div>
+    </div>
+    <iframe width="960" align="center" height="47" frameborder="0" scrolling="no" src="../../../footer.html"></iframe>
+</div>
+</body>
+</html>

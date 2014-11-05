@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鼠标单击切换标签的tab页</title>
+<link rel="shortcut icon" href="http://avaforvr.one.zcyj.info/favicon.ico">
+<link type="text/css" rel="stylesheet" href="../../../global.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="../../../jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="funcTab.js"></script>
+<script>
+$(document).ready(function(){
+	$(".tab").each(function(){ $(this).funcTab(); });
+});
+</script>
+</head>
+
+<body id="modules">
+<div class="wrapper">
+    <iframe width="960" align="center" height="125" frameborder="0" scrolling="no" src="../../../header2.html"></iframe>
+    <div class="main">
+        <h1>鼠标单击切换标签的tab页</h1>
+        <div class="column">
+            <h2>效果展示</h2>
+            <div class="column_c mt3">
+                <div class="tab">
+                    <ul class="tabTit">
+                        <li>tab1</li>
+                        <li>tab2</li>
+                        <li>tab3</li>
+                    </ul>
+                    <div class="tabCont">
+                        <div class="tabCont_c">
+                            tab1的内容
+                        </div>
+                        <div class="tabCont_c">
+                            tab2的内容
+                        </div>
+                        <div class="tabCont_c">
+                            tab3的内容
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="column mt4">
+            <h2>代码展示</h2>
+            <div class="column_c">
+            	<h3>HTML</h3>
+                <pre>&lt;div class=&quot;tab&quot;&gt;
+    &lt;ul class=&quot;tabTit&quot;&gt;
+        &lt;li&gt;tab1&lt;/li&gt;
+        &lt;li&gt;tab2&lt;/li&gt;
+        &lt;li&gt;tab3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tabCont&quot;&gt;
+        &lt;div class=&quot;tabCont_c&quot;&gt;tab1的内容&lt;/div&gt;
+        &lt;div class=&quot;tabCont_c&quot;&gt;tab2的内容&lt;/div&gt;
+        &lt;div class=&quot;tabCont_c&quot;&gt;tab3的内容&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            	<h3>CSS</h3>
+                <pre>.tab { width:400px; margin:auto; }
+.tabTit { height:30px; overflow:hidden; background:url(../../../examples/line.gif) repeat-x 0 29px; border-left:solid 1px #285000; }
+.tabTit li { float:left; height:28px; line-height:28px; overflow:hidden; cursor:pointer; padding:0 20px; background:#3e7b00; border-top:solid 1px #285000; border-right:solid 1px #285000; color:#fff; }
+.tabTit .hov { background:#285000; }
+.tabTit .cur { cursor:default; background:#fff; border-bottom:solid 1px #fff; color:#000; }
+.tabCont { clear:both; border:solid 1px #285000; border-top:none; }
+.tabCont_c { text-align:center; line-height:200px; }</pre>
+            	<h3>JS</h3>
+                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.6.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;funcTab.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&quot;.tab&quot;).each(function(){ $(this).funcTab(); });
+});
+&lt;/script&gt;</pre>
+            </div>
+        </div>        
+        <div class="column mt4">
+            <h2>相关文件下载</h2>
+            <ul class="download">
+            	<li>jquery基本包<a href="../../../jquery-1.6.1.min.js" target="_blank">jquery-1.6.1.min.js</a></li>
+                <li>tab页封装文件<a href="funcTab.js" target="_blank">funcTab.js</a></li>
+            </ul>
+        </div>
+        <div class="column mt4">
+            <h2>要点总结</h2>
+            <ul class="summary">
+            	<li>此段代码支持一页多个和多层嵌套；</li>
+            	<li>注意css中悬浮样式和选中样式的次序。</li>
+            </ul>
+        </div>
+    </div>
+    <iframe width="960" align="center" height="47" frameborder="0" scrolling="no" src="../../../footer.html"></iframe>
+</div>
+</body>
+</html>
