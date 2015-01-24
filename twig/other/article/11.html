@@ -1,5 +1,5 @@
-<h1>git 学习笔记（五）—— 消失的commit</h1>
-<div class="article">
+<article class="article">
+    <h1>git 学习笔记（五）—— 消失的commit</h1>
     <p>代码本地提交后，推送完成发现本地和远程仓库都找不到这个commit记录了，代码也丢了，人间惨剧！</p>
     <p class="mt4">So, you just did a <span class="fc4">git reset --hard HEAD^</span> and threw out your last commit. Well, it turns out you really did need those changes. You’ll never be able to implement that algorithm that perfectly twice, so you need it back. Don’t fear, git should still have your commit. When you do a reset, the commit you threw out goes to a “dangling” state. It’s still in git’s datastore, waiting for the next garbage collection to clean it up. So unless you’ve ran a <span class="fc4">git gc</span> since you tossed it, you should be in the clear to restore it.</p>
     <p class="mt4">For these examples, I’m working with the code for this blog. From the top, we just ran:</p>
@@ -30,4 +30,4 @@ submit.html    |    4 ++--
     <p class="mt4">This command will bring your lost changes back and make sure that <span class="fc4">HEAD</span> is pointing at the commit. From here you can continue to work as normal! You could also checkout the SHA1 into a new branch, but really a merge is the fastest and easiest way to restore that lost commit once you have the hash. If you have other ways let us know in the comments!</p>
     <p class="mt4">If you want some more options on what to do in this situation, <a href="http://programblings.com/2008/06/07/the-illustrated-guide-to-recovering-lost-commits-with-git" target="_blank">Mathieu Martin’s illustrated guide to recovering lost commits with Git</a> has plenty for you.</p>
     <p class="from">转自：<a href="http://gitready.com/advanced/2009/01/17/restoring-lost-commits.html" target="_blank">http://gitready.com/advanced/2009/01/17/restoring-lost-commits.html</a></p>
-</div>
+</article>

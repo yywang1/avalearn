@@ -20,7 +20,7 @@
 @blue: 					 #00f;
 
 // Scaffolding
-@body-bg:                #fff;
+@body-bg:                #f7f7f7;
 @text-color:             @gray-dark;
 
 // Links
@@ -32,19 +32,23 @@
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-helvetica:   "Helvetica Neue",Helvetica,Arial,sans-serif;
 @font-family-verdana:     Verdana, '\5b8b\4f53', Geneva, sans-serif;
+@font-family-yahei:       'Microsoft YaHei', sans-serif;
 @font-family-base:        @font-family-verdana;
 
 @font-size-base:          12px;
 @font-size-large:         ceil(@font-size-base * 1.15); // ~14px
 @font-size-small:         ceil(@font-size-base * 0.9); // ~11px
 
-@line-height-base:        150%;
+@line-height-base:        1.5;
 
 // Border
 @border-color:            #ddd;
 
 //wrap containner width
-@screen-width:            960px;
+@screen-width:            1000px;
+
+//space
+@space-base:              20px;
 
 //border radius:
 .border-radius(@radius) {
@@ -109,10 +113,31 @@
       -moz-background-clip: @reg;
            background-clip: @reg;
 }
+.gradient(@origin: top, @startColor, @endColor){
+    background-color:@startColor/2 + @endColor/2;
+    //filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startColor}', endColorstr='@{endColor}')";
+    background-image: -webkit-linear-gradient(@origin, @startColor, @endColor);
+    background-image:-moz-linear-gradient(@origin, @startColor, @endColor);
+    background-image: -o-linear-gradient(@origin, @startColor, @endColor);
+    background-image: -ms-linear-gradient(@origin, @startColor, @endColor);
+    background-image: linear-gradient(@origin, @startColor, @endColor);
+}
 .genVer() {
     @version : `'?'+Math.round(new Date().getTime()/1000).toString().substr(1)`;
 } .genVer();
 
 .container() {
-    width:@screen-width; margin-left:auto; margin-right:auto; clear: both;
+    clear: both;
+    position: relative;
+    margin: 0 auto;
+    max-width:@screen-width;
+}
+.clearfix() {
+    &:after { content: "."; clear: both; height: 0; visibility: hidden; display: block; }
+    & { *zoom:1;} ///* 激发IE中的hasLayout属性 for IE8(Quirks)模式和IE6\7浏览器*/
+}
+.common-panel() {
+    background: #fff;
+    .box-shadow(0 1px 4px #ccc);
+    .clearfix();
 }

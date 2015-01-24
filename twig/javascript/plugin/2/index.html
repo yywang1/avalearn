@@ -42,39 +42,39 @@
         <pre>&lt;div id=&quot;date&quot;&gt;&lt;/div&gt;</pre>
         <h3>JS</h3>
         <pre>&lt;script type=&quot;text/javascript&quot;&gt;
-function myGetDate() {
-var date = new Date();    //创建Date()对象
-var week = new Array(&quot;星期日&quot;, &quot;星期一&quot;, &quot;星期二&quot;, &quot;星期三&quot;, &quot;星期四&quot;, &quot;星期五&quot;, &quot;星期六&quot;); //创建星期数组
-var now = date.getFullYear() + &quot;年&quot;
-        + (date.getMonth() + 1) + &quot;月&quot;
-        + date.getDate() + &quot;日 &quot;
-        + week[date.getDay()] + &quot; &quot;
-        + date.getHours() + &quot;时&quot;
-        + date.getMinutes() + &quot;分&quot;
-        + date.getSeconds() + &quot;秒&quot;;
-var greet;    //问候语
-var hour = date.getHours();
-if (hour &lt; 6) {
-    greet = &quot;凌晨好！&quot;
-} else if (hour &lt; 9) {
-    greet = &quot;早上好！&quot;;
-} else if (hour &lt; 12) {
-    greet = &quot;上午好！&quot;;
-} else if (hour &lt; 14) {
-    greet = &quot;中午好！&quot;;
-} else if (hour &lt; 17) {
-    greet = &quot;下午好！&quot;;
-} else if (hour &lt; 19) {
-    greet = &quot;傍晚好！&quot;;
-} else if (hour &lt; 22) {
-    greet = &quot;晚上好！&quot;;
-} else {
-    greet = &quot;夜里好！&quot;;
-}
-document.getElementById(&quot;date&quot;).innerHTML = greet + &quot;现在是 &quot; + now;
-var autoTimer = setTimeout(myGetDate, 1000);
-}
-window.onload = myGetDate;
+    function myGetDate() {
+        var date = new Date();    //创建Date()对象
+        var week = new Array(&quot;星期日&quot;, &quot;星期一&quot;, &quot;星期二&quot;, &quot;星期三&quot;, &quot;星期四&quot;, &quot;星期五&quot;, &quot;星期六&quot;); //创建星期数组
+        var now = date.getFullYear() + &quot;年&quot;
+                + (date.getMonth() + 1) + &quot;月&quot;
+                + date.getDate() + &quot;日 &quot;
+                + week[date.getDay()] + &quot; &quot;
+                + date.getHours() + &quot;时&quot;
+                + date.getMinutes() + &quot;分&quot;
+                + date.getSeconds() + &quot;秒&quot;;
+        var greet;    //问候语
+        var hour = date.getHours();
+        if (hour &lt; 6) {
+            greet = &quot;凌晨好！&quot;
+        } else if (hour &lt; 9) {
+            greet = &quot;早上好！&quot;;
+        } else if (hour &lt; 12) {
+            greet = &quot;上午好！&quot;;
+        } else if (hour &lt; 14) {
+            greet = &quot;中午好！&quot;;
+        } else if (hour &lt; 17) {
+            greet = &quot;下午好！&quot;;
+        } else if (hour &lt; 19) {
+            greet = &quot;傍晚好！&quot;;
+        } else if (hour &lt; 22) {
+            greet = &quot;晚上好！&quot;;
+        } else {
+            greet = &quot;夜里好！&quot;;
+        }
+        document.getElementById(&quot;date&quot;).innerHTML = greet + &quot;现在是 &quot; + now;
+        var autoTimer = setTimeout(myGetDate, 1000);
+    }
+    window.onload = myGetDate;
 &lt;/script&gt;</pre>
     </div>
 </div>

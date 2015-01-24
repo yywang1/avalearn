@@ -1,0 +1,32 @@
+.header {
+    margin-bottom: @space-base;
+    background: #272727;
+    line-height: 40px;
+    white-space: nowrap;
+    .gradient(top, #323232, #202020);
+}
+.logo {
+    float: left;
+    padding: 0 15px;
+    display: inline-block;
+    background: #3a3a3a;
+    color: #fff;
+    font-size: @font-size-large;
+    text-decoration: none;
+    &:hover {
+        background: #454545;
+        text-decoration: none;
+    }
+}
+//导航
+.header-nav {
+    float: right;
+    a {
+        margin-left: @space-base;
+        color: #ddd;
+        font-size: 14px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
