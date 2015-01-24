@@ -198,6 +198,39 @@ function isLogin() {
 	}
 }
 
+function getResources($container) {
+	return json_decode(file_get_contents($container['PHP_PATH'] . 'includes/resources.json'), true);
+}
+
+function getPageTitle($container, $cat_name, $page_id) {
+	if(! empty($container)) {
+		//get Group Name
+		$group_name = false;
+		$url = $_SERVER['REQUEST_URI'];
+		if(strpos($url, 'article.php')) {
+			$group_name = 'article';
+		} elseif(strpos($url, 'plugin.php')) {
+			$group_name = 'plugin';
+		} elseif(strpos($url, 'pluginshot.php')) {
+			$group_name = 'pluginshot';
+		}
+
+		if($group_name) {
+			$page_title = '';
+			$resources = getResources($container);
+			$group = $resources[$cat_name][$group_name];
+			foreach($group as $page) {
+				if($page['pageId'] === $page_id) {
+					$page_title = $page['title'];
+				}
+			}
+			return $page_title . ' - Ava is learning...';
+		}
+	}
+
+	return 'Ava is learning...';
+}
+
 function getTplArray($container) {
 	$tplArray = array(
 			'WEB_ROOT' => $container['WEB_ROOT'],
@@ -207,7 +240,7 @@ function getTplArray($container) {
 			'DEBUG_MODE' => $container['siteConf']['DEBUG_MODE'],
 			'REQUEST_URI' => urlencode($_SERVER['REQUEST_URI']),
 			'version' => $container['siteConf']['version'],
-			'title' => 'Ava 的网站 - Ava is learning'
+			'title' => 'Ava is learning...'
 		);
 
     /*
@@ -218,7 +251,7 @@ function getTplArray($container) {
 		$tplArray['is_login'] = false;
 	}
 	*/
-	
+
 	return $tplArray;
 }
 

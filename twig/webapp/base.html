@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    {% include 'webapp/common/links.html' %}
+</head>
+
+<body>
+    {% include 'webapp/common/header.html' %}
+
+    <div class="container">
+        {{main | raw}}
+    </div>
+
+    {% include 'webapp/common/footer.html' %}
+</body>
+</html>

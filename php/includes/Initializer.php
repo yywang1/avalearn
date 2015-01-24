@@ -24,7 +24,7 @@ class Initializer{
 			$paths = array();
 			$paths['twig'] = $c['ROOT_PATH'] . 'twig/';
 			$paths['caches'] = $c['ROOT_PATH'] . 'caches/';
-			$paths['pack'] = $c['WEB_ROOT'] . 'twig/';
+			$paths['resources'] = $c['WEB_ROOT'] . 'twig/';
 			$public_path = $c['WEB_ROOT'] . 'public/';
 			$paths['css'] = $public_path . 'css/';
 			$paths['js'] = $public_path . 'js/';
