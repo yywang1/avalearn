@@ -33,10 +33,12 @@
         <ul class="textlist{{isFirstList ? ' first' : ''}}">
             {% for page in cat['article'] %}
                 <li>
-                    {% if page['status'] %}
-                    <span>[{{page['status']}}]</span>
-                    {% endif %}
-                    <a href="{{WEB_ROOT}}article.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">{{page['title']}}</a>
+                    <a href="{{WEB_ROOT}}article.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
+                        {% if page['status'] %}
+                            <span>[{{page['status']}}]</span>
+                        {% endif %}
+                        {{page['title']}}
+                    </a>
                 </li>
             {% endfor %}
         </ul>
@@ -47,10 +49,12 @@
         <ul class="textlist">
             {% for page in cat['plugin'] %}
                 <li>
-                    {% if page['status'] %}
-                    <span>[{{page['status']}}]</span>
-                    {% endif %}
-                    <a href="{{WEB_ROOT}}plugin.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">{{page['title']}}</a>
+                    <a href="{{WEB_ROOT}}plugin.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
+                        {% if page['status'] %}
+                            <span>[{{page['status']}}]</span>
+                        {% endif %}
+                        {{page['title']}}
+                    </a>
                 </li>
             {% endfor %}
         </ul>
