@@ -10,16 +10,34 @@
     }
     li {
         float: left;
-        width: 292px;
-        height: 24px;
-        line-height: 24px;
+        width: 33.3%;
         overflow: hidden;
-        padding-left: 24px;
-        background: url(../images/icon.gif) no-repeat 13px 11px;
     }
-
+    a {
+        display: block;
+        padding: 5px 0 5px 10px;
+        white-space: nowrap;
+    }
     span {
         color: #999999;
         padding-right: 6px;
+    }
+}
+.imglist + .textlist {
+
+}
+@media screen and (max-width: 680px) {
+    .textlist li {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 340px) {
+    .textlist {
+        li {
+            width: 100%;
+        }
+        a {
+            white-space: normal;
+        }
     }
 }
