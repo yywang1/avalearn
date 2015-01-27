@@ -1,5 +1,5 @@
 {% for catKey, cat in resources %}
-<section class="column" id="{{catKey}}">
+<section class="panel index-panel" id="{{catKey}}">
     <h2>{{cat['title']|upper}}</h2>
 
     {# 第一个textlist不加边框 #}
@@ -63,7 +63,7 @@
 </section>
 {% endfor %}
 
-<section class="column friendlink">
+<section class="panel friendlink">
     <h2 class="clearfix"><span class="fl">常用素材网站</span></h2>
     <p>
         <a href="http://www.zcool.com.cn/" target="_blank">站酷（ZCOOL）</a>

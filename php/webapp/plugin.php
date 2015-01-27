@@ -6,8 +6,9 @@ $cat_name = reset(explode('_', $pid));
 $page_id = end(explode('_', $pid));
 
 $tplArray['title'] = getPageTitle($container, $cat_name, $page_id);
+$tplArray['sub_twig'] = "{$cat_name}/plugin/{$page_id}/";
 
-$article = $container['twig']->render("{$cat_name}/article/{$page_id}.html");
+$article = $container['twig']->render("{$cat_name}/plugin/{$page_id}/index.html", $tplArray);
 
 //替换图片路径
 //$images_path = $container["path"]["resources"] . "{$cat_name}/plugin/images/";

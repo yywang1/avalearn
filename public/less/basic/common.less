@@ -18,14 +18,19 @@
 .font-bold{font-weight: bold;}
 .font-normal{font-weight: normal;}
 
-.font-yes { font-weight: bold; color: @green; }
-.font-no { font-weight: bold; color: @red; }
-
 .line-under { text-decoration:underline; }
 .line-through { text-decoration:line-through; }
 .line-none { text-decoration:none; }
 
 .highlight { color: @highlight; }
+.right { color: @green; }
+.wrong { color: @red; }
+
+.note {
+    font-size: 12px;
+    color: @gray;
+}
+
 .nowrap {white-space: nowrap;}
 //vertical align
 .ver-middle {vertical-align: middle;}
@@ -62,3 +67,10 @@
 .hide{display: none;}
 .show{display: block;}
 .inline-block{display: inline-block;}
+
+//面板
+.panel {
+    margin-bottom: @space-base;
+    padding: ((@space-base) - 5) ((@space-base) + 5);
+    .common-panel();
+}

@@ -1,0 +1,14 @@
+<div>
+    <p><label><input id="format" type="checkbox" checked/> 格式化转义前代码</label></p>
+
+    <p>转义前</p>
+    <textarea id="original" onkeyup="formatAndEscape()"></textarea>
+
+    <p>转义后</p>
+    <textarea id="result"></textarea>
+
+    <p class="text-center">
+        <button id="btnCopy" type="button">复 制</button>
+        <button id="btnClear" type="button" onClick="clearData()">清 空</button>
+    </p>
+</div>

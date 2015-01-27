@@ -6,6 +6,8 @@
 
 @import "basic/common.less"; //全站通用样式：基础样式、页面布局
 
+@import "basic/form.less"; //表单基础样式
+
 // 公共模块
 // --------------------------------------------------
 @import "mod/header.less"; //页头
@@ -14,13 +16,15 @@
 
 @import "mod/back_to_top.less"; //Back to top
 
-@import "mod/column.less"; //section
+@import "mod/index_panel.less"; //section
 
 @import "mod/imglist.less"; //带截图的列表
 
 @import "mod/textlist.less"; //文字列表
 
 @import "mod/article.less"; //文章
+
+@import "mod/plugin.less"; //特效
 
 /*特效*/
 #modules h1 {
@@ -45,33 +49,8 @@
     padding-left: 13px;
 }
 
-.summary {
-    list-style: decimal;
-    margin: 10px 13px 0 32px;
-}
 
-.summary li {
-    list-style: decimal;
-    list-style-position: outside;
-}
 
-.download {
-    margin: 10px 13px 0;
-}
-
-.download li {
-    height: 24px;
-    line-height: 24px;
-    overflow: hidden;
-    padding-left: 11px;
-    background: url(../images/icon.gif) no-repeat 0 11px;
-}
-
-.download a {
-    color: #0012ff;
-    text-decoration: underline;
-    margin-left: 10px;
-}
 .tip {
     width: 100%;
     clear: both;
