@@ -3,7 +3,7 @@
         margin-left: 15px;;
     }
 </style>
-<article class="article">
+
     <h1>获取各种宽高及距离</h1>
     <h3>获取屏幕和文档信息</h3>
     <p>测试环境：1680*1050分辨率，火狐、IE7</p>
@@ -67,10 +67,10 @@
                 <td>网页正文全文宽</td>
                 <td>document.body.scrollWidth</td>
                 <td><span class="right">IE7</span><span class="right">火狐</span><span class="wrong">值</span></td>
-                <td><span class="fc4">正文宽度不溢出</span><br />
+                <td><span class="highlight">正文宽度不溢出</span><br />
                     IE7：网页可见区域宽 - margin - border -  滚动条(17)<br />
                     火狐：网页可见区域宽 - margin - 滚动条(17)<br />
-                    <span class="fc4">正文宽度溢出</span><br />
+                    <span class="highlight">正文宽度溢出</span><br />
                     IE7：正文宽度 + padding<br />
                     火狐：网页可见区域宽 - margin - 滚动条(17)</td>
             </tr>
@@ -156,9 +156,9 @@
             <tr>
                 <td>obj.scrollWidth</td>
                 <td><span class="right">IE7</span><span class="right">火狐</span><span class="wrong">值</span></td>
-                <td><span class="fc4">子元素宽度不溢出</span><br />
+                <td><span class="highlight">子元素宽度不溢出</span><br />
                     IE7、火狐：自身width + 自身padding <br />
-                    <span class="fc4">子元素宽度溢出</span><br />
+                    <span class="highlight">子元素宽度溢出</span><br />
                     IE7：子元素高（width + padding + border + margin） + 自身padding-left + 自身padding-right<br />
                     火狐：子元素高（width + padding + border + margin） + 自身padding-left</td>
             </tr>
@@ -176,10 +176,10 @@
             <tr>
                 <td>obj.scrollHeight</td>
                 <td><span class="right">IE7</span><span class="right">火狐</span><span class="wrong">值</span></td>
-                <td><span class="fc4">子元素高度不溢出</span><br />
+                <td><span class="highlight">子元素高度不溢出</span><br />
                     IE7：子元素高（width + padding + border + margin） + 自身padding<br />
                     火狐：自身height + padding<br />
-                    <span class="fc4">子元素高度溢出</span><br />
+                    <span class="highlight">子元素高度溢出</span><br />
                     IE7：子元素高（height + padding + border + margin） + 自身padding-top + 自身padding-bottom<br />
                     火狐：子元素高（height + padding + border + margin） + 自身padding-top</td>
             </tr>
@@ -224,4 +224,3 @@
         </tbody>
     </table>
     <p><strong>学习总结</strong>：测试scroll相关属性时发现，父元素padding与子元素margin在IE和火狐中有不同状况的重叠，建议需要控制间距时，直接在子元素上添加margin，不要在父元素上添加padding。</p>
-</article>

@@ -1,4 +1,4 @@
-<article class="article">
+
 	<h1>git 学习笔记（三）—— Generating SSH Keys</h1>
 	<p>If you have decided not to use the recommended HTTPS method, we can use SSH keys to establish a secure connection between your computer and GitHub. The steps below will walk you through generating an SSH key and then adding the public key to your GitHub account.</p>
 	<h3>Step 1: Check for SSH keys</h3>
@@ -28,7 +28,7 @@ $ ssh-add id_rsa</pre>
 	<p>Run the following code to copy the key to your clipboard.</p>
 	<pre>$ clip < ~/.ssh/id_rsa.pub
 # Copies the contents of the id_rsa.pub file to your clipboard</pre>
-	<p><img src="images/page6_1.png"></p>
+	<p><img src="{{res_path}}images/page6_1.png"></p>
 	<h3>Step 4: Test everything out</h3>
 	<p>To make sure everything is working you'll now SSH to GitHub. When you do this, you will be asked to authenticate this action using your password, which for this purpose is the passphrase you created earlier. Don't change the git@github.com part. That's supposed to be there.</p>
 	<pre>$ ssh -T git@github.com
@@ -64,4 +64,3 @@ Warning: Permanently added 'github.com,192.30.252.131' (RSA) to the list of know
 Hi yywang1! You've successfully authenticated, but GitHub does not provide shell access.
 </pre>
 	<p class="from">参考：<a href="https://help.github.com/articles/generating-ssh-keys#platform-windows" target="_blank">Generating SSH Keys</a></p>
-</article>

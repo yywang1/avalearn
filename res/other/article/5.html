@@ -1,17 +1,17 @@
-<article class="article">
+
     <h1>git 学习笔记（二）</h1>
     <h3>SSH Keys</h3>
     <p><a href="page6.html" target="_blank">Generating SSH Keys</a></p>
     <h3>配置邮箱和用户名</h3>
-    <pre>git config --global user.email "yywang1@i9i8.com"
+<pre>git config --global user.email "yywang1@i9i8.com"
 git config --global user.name "yywang1"</pre>
     <h3>提交修改文件</h3>
-    <pre>git status                                       # 查看修改了哪些文件
+<pre>git status                                       # 查看修改了哪些文件
 git diff / git diff file                          # 查看修改代码
 q                                                     # 退出diff
 git commit -m 'files changed' -a       #提交修改</pre>
     <h3>删除文件</h3>
-    <pre>git rm [path]/* -r                                    #批量删除path目录下的文件
+<pre>git rm [path]/* -r                                    #批量删除path目录下的文件
 git commit -a -m 'remove files in **'       #提交修改</pre>
     <h3>分支操作</h3>
     <table class="table1" width="100%">
@@ -246,7 +246,7 @@ git commit -a -m 'remove files in **'       #提交修改</pre>
     <h3>取消追踪</h3>
     <h4>忽略目录及目录中的文件</h4>
     <p>在代码目录下建立.gitignore文件，内容如下</p>
-    <pre># 忽略templates目录及目录下所有文件
+<pre># 忽略templates目录及目录下所有文件
 templates/
 
 # 忽略掉文件
@@ -254,7 +254,7 @@ test.php</pre>
     <h4>保留目录，忽略目录中的文件</h4>
     <p>1. 在代码目录下建立.gitignore，内容如下</p>
     <p>2. 在templates目录下建立名为 .gitkeep 的空文件（文件名随意，但要和.gitignore中对应），这样这个目录就保留下来了</p>
-    <pre># 忽略templates目录中的所有文件
+<pre># 忽略templates目录中的所有文件
 templates/*
 
 #保留templates目录中的.gitkeep文件
@@ -263,7 +263,7 @@ templates/*
 #也可以保留templates目录中的其它文件，如 test.html：
 !templates/test.html</pre>
     <p>示例：books项目中的.gitignore文件</p>
-    <pre># 以'#' 开始的行，被视为注释.
+<pre># 以'#' 开始的行，被视为注释.
 
 #过滤数据库文件、sln解决方案文件、配置文件  
 *.mdb  
@@ -334,7 +334,7 @@ test.php</pre>
                 <td>使用https开头的git仓库路径，git pull origin master 报错：<br>
                 fatal: unable to access 'https://g.pupugao.com/v5/esmeralda-editor.git/': SSL certificate problem: self signed certificate</td>
                 <td>设置 git https 访问不验证证书：<pre>$ git config http.sslVerify false</pre>可以看到.git/config文件中添加了两行代码：
-                <pre>[http]
+            <pre>[http]
 sslVerify = false</pre></td>
             </tr>
             <tr>
@@ -342,7 +342,7 @@ sslVerify = false</pre></td>
                     该错误是因为https下推送的代码体积过大引起的
                 </td>
                 <td>.git/config文件中添加了两行代码：
-                <pre>[http]
+            <pre>[http]
 postBuffer = 524288000</pre></td>
             </tr>
             <tr>
@@ -351,4 +351,3 @@ postBuffer = 524288000</pre></td>
             </tr>
         </tbody>
     </table>
-</article>

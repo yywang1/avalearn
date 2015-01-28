@@ -1,11 +1,11 @@
 <style>
     input[type="text"] { margin-right: 20px; border: solid 1px #ccc; padding: 5px 10px; height:26px; background:#fff; font-size:16px; }
 </style>
-<script type="text/javascript" src="{{JS_PATH}}jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{{JS_PATH}}jquery/jquery-1.11.2.min.js"></script>
 <h1>输入框特效</h1>
-<div class="column">
+<div class="plugin-panel">
     <h2>效果展示</h2>
-    <div class="column_c mt3">
+    <div class="highlight mt3">
         <dl>
             <dt class="fs2">模拟输入框 placeholder 属性</dt>
             <dd>
@@ -29,9 +29,9 @@
         </dl>
     </div>
 </div>
-<div class="column mt4">
+<div class="plugin-panel">
     <h2>代码展示</h2>
-    <div class="column_c">
+    <div class="highlight">
         <h3>HTML</h3>
         <pre>&lt;div class=&quot;sele&quot; style=&quot;width:150px&quot;&gt;
 &lt;input type=&quot;text&quot; value=&quot;全部地区&quot; /&gt;
@@ -50,7 +50,7 @@
 .sele li { cursor: pointer; height: 30px; line-height: 30px; white-space: nowrap; border: solid 2px #97c4ee; border-top: none; background: #fff; color: #333; font-size: 14px; padding: 0 15px; }
 .sele li:hover { background: #f1f1f1; }</pre>
         <h3>JS</h3>
-        <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.6.1.min.js&quot;&gt;&lt;/script&gt;
+        <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;funcSelect.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 $(document).ready(function(){
@@ -61,18 +61,18 @@ $(this).funcSelect({maxNum:8,liH:32,plusW:55});
 &lt;/script&gt;</pre>
     </div>
 </div>
-<div class="column mt4">
+<div class="plugin-panel">
     <h2>相关文件下载</h2>
     <ul class="download">
-        <li>jquery基本包<a href="../../../jquery-1.6.1.min.js" target="_blank">jquery-1.6.1.min.js</a></li>
+        <li>jquery基本包<a href="../../../jquery-1.11.2.min.js" target="_blank">jquery-1.11.2.min.js</a></li>
         <li>仿select的封装js<a href="funcSelect.js" target="_blank">funcSelect.js</a></li>
     </ul>
 </div>
-<div class="column mt4">
+<div class="plugin-panel">
     <h2>要点总结</h2>
     <ul class="summary">
         <li>三个参数：下拉选项中li的高度，不出现滚动的情况下可以显示的li的最大个数，最外层div与输入框宽度的差值；</li>
         <li>js中加入了判断语句，若输入框处被替换成a或span等标签，则不执行点击下拉选项赋值的操作；</li>
-        <li>使用 <span class="fc4">get(0)</span> 可以选择一个实际的DOM元素并且对他直接操作，$(this).get(0)与$(this)[0]等价。</li>
+        <li>使用 <span class="highlight">get(0)</span> 可以选择一个实际的DOM元素并且对他直接操作，$(this).get(0)与$(this)[0]等价。</li>
     </ul>
 </div>

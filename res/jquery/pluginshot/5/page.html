@@ -6,7 +6,7 @@
 <link rel="shortcut icon" href="http://avaforvr.one.zcyj.info/favicon.ico">
 <link type="text/css" rel="stylesheet" href="../../../global.css" />
 <link type="text/css" rel="stylesheet" href="style.css" />
-<script type="text/javascript" src="../../../jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="../../../jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="scrollL.js" charset="utf-8"></script>
 <script type="text/javascript" src="scrollR.js"></script>
 <script type="text/javascript" src="scrollT.js"></script>
@@ -26,9 +26,9 @@
     <iframe width="960" align="center" height="125" frameborder="0" scrolling="no" src="../../../header2.html"></iframe>
     <div class="main">
         <h1>不带按钮的无缝滚动</h1>
-        <div class="column">
+        <div class="plugin-panel">
             <h2>效果展示</h2>
-            <div class="column_c mt3">
+            <div class="highlight mt3">
                 <!--向左滚动-->
                 <div class="scrollL">
                     <div class="scrollIn">
@@ -93,9 +93,9 @@
                 </div>
             </div>
         </div>
-        <div class="column mt4">
+        <div class="plugin-panel">
             <h2>代码展示</h2>
-            <div class="column_c">
+            <div class="highlight">
             	<h3>HTML</h3>
                 <pre>&lt;div class=&quot;scrollL&quot;&gt;
     &lt;div class=&quot;scrollIn&quot;&gt;
@@ -123,7 +123,7 @@
 .scrollT img { width:178px; height:134px; }</pre>
             	<p class="note">以向左和向上滚动为例，向右与向左样式相同，向下与向上样式相同</p>
                 <h3>JS</h3>
-                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.6.1.min.js&quot;&gt;&lt;/script&gt;
+                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;scrollL.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
     $(document).ready(function(){
@@ -133,10 +133,10 @@
 				<p class="note">以向左滚动为例，其它基本相同</p>
             </div>
         </div>
-        <div class="column mt4">
+        <div class="plugin-panel">
             <h2>相关文件下载</h2>
             <ul class="download">
-            	<li>jquery基本包<a href="../../../jquery-1.6.1.min.js" target="_blank">jquery-1.6.1.min.js</a></li>
+            	<li>jquery基本包<a href="../../../jquery-1.11.2.min.js" target="_blank">jquery-1.11.2.min.js</a></li>
                 <li>向左滚动<a href="scrollL.js" target="_blank">scrollL.js</a></li>
                 <li>向右滚动<a href="scrollR.js" target="_blank">scrollR.js</a></li>
                 <li>向上滚动<a href="scrollT.js" target="_blank">scrollT.js</a></li>
@@ -148,13 +148,13 @@
                 
             </ul>
         </div>
-        <div class="column mt4">
+        <div class="plugin-panel">
             <h2>要点总结</h2>
             <ul class="summary">
             	<li>以上滚动js代码的原理是：将ulCont中的代码复制到ulCopy中，scrollIn开始滚动；当 ulCopy的最后一个标签完全进入可见区域时，scrollIn跳到ulCont 的最后一个标签完全进入可见区域的位置。</li>
-            	<li><span class="fc4">ulCopy</span>的使用(实现无缝滚动)；</li>
-            	<li><span class="fc4">滚动距离关键点</span>的判断；</li>
-            	<li>头部调用函数时<span class="fc4">传参</span>。</li>
+            	<li><span class="highlight">ulCopy</span>的使用(实现无缝滚动)；</li>
+            	<li><span class="highlight">滚动距离关键点</span>的判断；</li>
+            	<li>头部调用函数时<span class="highlight">传参</span>。</li>
             </ul>
         </div>
     </div>

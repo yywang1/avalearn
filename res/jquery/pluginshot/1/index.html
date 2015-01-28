@@ -1,9 +1,9 @@
 <link type="text/css" rel="stylesheet" href="{{pack}}style.css" />
 
 <h1>多级下拉导航</h1>
-<div class="column">
+<div class="plugin-panel">
     <h2>效果展示</h2>
-    <div class="column_c mt3">
+    <div class="highlight mt3">
         <div class="topnav">
             <ul class="ul1">
                 <li class="li1"><a href="#" class="a1">一级导航一</a></li>
@@ -115,9 +115,9 @@
         </div>
     </div>
 </div>
-<div class="column mt4">
+<div class="plugin-panel">
     <h2>代码展示</h2>
-    <div class="column_c">
+    <div class="highlight">
         <h3>HTML</h3>
         <pre>&lt;div class=&quot;topnav&quot;&gt;
 &lt;ul class=&quot;ul1&quot;&gt;
@@ -163,7 +163,7 @@
 .topnav .li2 .hasSub { background:url(bgpic.gif) no-repeat 90% -70px; }
 .topnav .li2 .hasSub:hover, .topnav .li2 .hasSubHov { /*background:url(bgpic.gif) no-repeat 90% -113px #285000;*/ background:url(bgpic.gif) no-repeat 90% -70px #285000; }</pre>
         <h3>JS</h3>
-        <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.6.1.min.js&quot;&gt;&lt;/script&gt;
+        <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;dropMenu.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 $(document).ready(function(){
@@ -172,22 +172,22 @@ $(&quot;.topnav&quot;).dropMenu({delayTime:200});
 &lt;/script&gt;</pre>
     </div>
 </div>
-<div class="column mt4">
+<div class="plugin-panel">
     <h2>相关文件下载</h2>
     <ul class="download">
-        <li>jquery基本包<a href="../../../jquery-1.6.1.min.js" target="_blank">jquery-1.6.1.min.js</a></li>
+        <li>jquery基本包<a href="../../../jquery-1.11.2.min.js" target="_blank">jquery-1.11.2.min.js</a></li>
         <li>下拉菜单封装js<a href="dropMenu.js" target="_blank">dropMenu.js</a></li>
     </ul>
 </div>
-<div class="column mt4">
+<div class="plugin-panel">
     <h2>要点总结</h2>
     <ul class="summary">
-        <li>overflow属性是关键，建议该段代码中除了现存的overflow属性以外不要出现 <span class="fc4">overflow:hidden</span>；</li>
+        <li>overflow属性是关键，建议该段代码中除了现存的overflow属性以外不要出现 <span class="highlight">overflow:hidden</span>；</li>
         <li>如果鼠标无法悬浮在子菜单上，可以尝试给它的父标签设置高度或宽度；</li>
         <li>判断子菜单的位置。</li>
     </ul>
 </div>
-<script type="text/javascript" src="{{JS_PATH}}jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{{JS_PATH}}jquery/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="{{pack}}dropMenu.js"></script>
 <script>
     $(document).ready(function(){

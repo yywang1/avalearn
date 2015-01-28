@@ -6,7 +6,7 @@
 <link rel="shortcut icon" href="http://avaforvr.one.zcyj.info/favicon.ico">
 <link type="text/css" rel="stylesheet" href="../../../global.css" />
 <link type="text/css" rel="stylesheet" href="style.css" />
-<script type="text/javascript" src="../../../jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="../../../jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="imgSize.js"></script>
 <script>
 	$(document).ready(function(){
@@ -22,9 +22,9 @@
     <iframe width="960" align="center" height="125" frameborder="0" scrolling="no" src="../../../header2.html"></iframe>
     <div class="main">
         <h1>图片等比缩放(有加载中状态)</h1>
-        <div class="column">
+        <div class="plugin-panel">
             <h2>效果展示</h2>
-            <div class="column_c mt3">
+            <div class="highlight mt3">
                 <div class="tip">按最大宽度和最大高度等比缩放，图片完整显示在该区域内</div>
                 <ul class="imgList1">
                     <li><img src="../../../examples/pic8.jpg" alt="示例图片" /></li>
@@ -49,9 +49,9 @@
                 <div class="clear"></div>
             </div>
         </div>
-        <div class="column mt4">
+        <div class="plugin-panel">
             <h2>代码展示</h2>
-            <div class="column_c">
+            <div class="highlight">
             	<h3>HTML</h3>
                 <pre>&lt;ul class=&quot;imgList1&quot;&gt;
     &lt;li&gt;&lt;img src=&quot;../../../examples/pic8.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/li&gt;
@@ -73,7 +73,7 @@
 .imgList3 { width:100%; overflow:hidden; float:left; }
 .imgList3 li { width:200px; overflow:hidden; float:left; border:solid 1px #ccc; margin-right:10px; text-align:center; }</pre>
             	<h3>JS</h3>
-                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.6.1.min.js&quot;&gt;&lt;/script&gt;
+                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;imgSize.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
     $(document).ready(function(){
@@ -84,17 +84,17 @@
 &lt;/script&gt;</pre>
             </div>
         </div>
-        <div class="column mt4">
+        <div class="plugin-panel">
             <h2>相关文件下载</h2>
             <ul class="download">
-            	<li>jquery基本包<a href="../../../jquery-1.6.1.min.js" target="_blank">jquery-1.6.1.min.js</a></li>
+            	<li>jquery基本包<a href="../../../jquery-1.11.2.min.js" target="_blank">jquery-1.11.2.min.js</a></li>
                 <li>图片等比缩放js<a href="imgSize.js" target="_blank">imgSize.js</a></li>
             </ul>
         </div>
-        <div class="column mt4">
+        <div class="plugin-panel">
             <h2>要点总结</h2>
             <ul class="summary">
-            	<li>读取图片的尺寸，要使用<span class="fc4">Image()</span>类，否则读取的尺寸经常出现错误。</li>
+            	<li>读取图片的尺寸，要使用<span class="highlight">Image()</span>类，否则读取的尺寸经常出现错误。</li>
             </ul>
         </div>
     </div>

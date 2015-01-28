@@ -6,14 +6,10 @@ $cat_name = reset(explode('_', $pid));
 $page_id = end(explode('_', $pid));
 
 $tplArray['title'] = getPageTitle($container, $cat_name, $page_id);
+$tplArray['res_path'] = $container['WEB_ROOT'] . "res/{$cat_name}/article/";
 
-$article = $container['twig']->render("{$cat_name}/article/{$page_id}.html");
-
-//替换图片路径
-$images_path = $container["path"]["resources"] . "{$cat_name}/article/images/";
-$article = str_replace('images/', $images_path ,$article);
-
-$tplArray['main'] = $article;
+$article = $container['twig']->render("{$cat_name}/article/{$page_id}.html", $tplArray);
+$tplArray['main'] = '<article class="panel article">' . $article . '</article>';
 
 echo $container['twig']->render('webapp/base.html', $tplArray);
 

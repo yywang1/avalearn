@@ -2,6 +2,7 @@
     margin-bottom: ((@space-base) + 10);
     font-size: 14px;
     line-height: 1.86;
+    .clearfix();
     h2 {
         margin-bottom: 15px;
         font: normal 22px @font-family-yahei;
@@ -17,9 +18,12 @@
         color: #0012FF;
     }
 }
+.plugin-cont {
+    padding: 0 ((@space-base)/2);
+}
 
 .summary, .download {
-    margin: 10px 13px 0 32px;
+    margin-left: 16px;
     list-style: square;
     li {
         margin-bottom: 10px;

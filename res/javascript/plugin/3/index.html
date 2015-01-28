@@ -1,120 +1,25 @@
 <h1>倒计时</h1>
-<div class="column">
+<section class="plugin-panel">
     <h2>效果展示</h2>
-    <div class="column_c mt3">
-        <div id="countdown"></div>
-        <div id="countdown2"></div>
-        <script>
-            function Timer(endTime, htmlElemId) {
-                this.endTime = endTime;
-                this.isEnd = false; //倒计时是否已结束
-                this.htmlElem = document.getElementById(htmlElemId);
-            }
-            Timer.prototype = {
-                start : function () {
-                    return new Date();
-                },
-                end : function () {
-                    return new Date(this.endTime);
-                },
-                init : function () {
-                    var offsetm = this.end() - this.start();
-                    if (offsetm <= 0) {
-                        this.isEnd = true;
-                    } else {
-                        this.isEnd = false;
-                        this.days = Math.floor(offsetm / (1000 * 60 * 60 * 24));
-                        offsetm = offsetm - this.days * 1000 * 60 * 60 * 24;
-                        this.hours = Math.floor(offsetm / (1000 * 60 * 60));
-                        offsetm = offsetm - this.hours * 1000 * 60 * 60;
-                        this.mins = Math.floor(offsetm / (1000 * 60));
-                        offsetm = offsetm - this.mins * 1000 * 60;
-                        this.seconds = Math.floor(offsetm / 1000);
-                    }
-                },
-                run : function () {
-                    var _self = this;
-                    setInterval(function () {
-                        _self.init();
-                        _self.print();
-                    }, 1000);
-                },
-                print : function () {
-                    if (this.isEnd) {
-                        this.htmlElem.innerHTML = '距离 ' + this.endTime + ' 倒计时已结束';
-                    } else {
-                        this.htmlElem.innerHTML = '距离 ' + this.endTime + ' 还有 ' + this.days + ' 天 ' + this.hours + ' 时 ' + this.mins + ' 分 ' + this.seconds + ' 秒';
-                    }
-                }
-            };
-
-            var t = new Timer('2013-12-19', 'countdown');
-            t.run();
-            var t2 = new Timer('2013-12-25', 'countdown2');
-            t2.run();
-        </script>
+    <div class="plugin-cont">
+        {% include sub_twig ~ 'html.html' %}
+        {% include sub_twig ~ 'js.html' %}
     </div>
-</div>
-<div class="column mt4">
+</section>
+<section class="plugin-panel">
     <h2>代码展示</h2>
-    <div class="column_c">
+    <div class="plugin-cont">
         <h3>HTML</h3>
-        <pre>&lt;div id=&quot;countdown&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;countdown2&quot;&gt;&lt;/div&gt;</pre>
+        <pre>{{ source(sub_twig ~ 'html.html')|e }}</pre>
         <h3>JS</h3>
-        <pre>function Timer(endTime, htmlElemId) {
-this.endTime = endTime;
-this.isEnd = false; //倒计时是否已结束
-this.htmlElem = document.getElementById(htmlElemId);
-}
-Timer.prototype = {
-start : function () {
-return new Date();
-},
-end : function () {
-return new Date(this.endTime);
-},
-init : function () {
-var offsetm = this.end() - this.start();
-if (offsetm &lt;= 0) {
-    this.isEnd = true;
-} else {
-    this.isEnd = false;
-    this.days = Math.floor(offsetm / (1000 * 60 * 60 * 24));
-    offsetm = offsetm - this.days * 1000 * 60 * 60 * 24;
-    this.hours = Math.floor(offsetm / (1000 * 60 * 60));
-    offsetm = offsetm - this.hours * 1000 * 60 * 60;
-    this.mins = Math.floor(offsetm / (1000 * 60));
-    offsetm = offsetm - this.mins * 1000 * 60;
-    this.seconds = Math.floor(offsetm / 1000);
-}
-},
-run : function () {
-var _self = this;
-setInterval(function () {
-    _self.init();
-    _self.print();
-}, 1000);
-},
-print : function () {
-if (this.isEnd) {
-    this.htmlElem.innerHTML = &#39;距离 &#39; + this.endTime + &#39; 倒计时已结束&#39;;
-} else {
-    this.htmlElem.innerHTML = &#39;距离 &#39; + this.endTime + &#39; 还有 &#39; + this.days + &#39; 天 &#39; + this.hours + &#39; 时 &#39; + this.mins + &#39; 分 &#39; + this.seconds + &#39; 秒&#39;;
-}
-}
-};
-
-var t = new Timer(&#39;2013-12-19&#39;, &#39;countdown&#39;);
-t.run();
-var t2 = new Timer(&#39;2013-12-25&#39;, &#39;countdown2&#39;);
-t2.run();
-</pre>
+        <pre>{{ source(sub_twig ~ 'js.html')|e }}</pre>
     </div>
-</div>
-<div class="column mt4">
+</section>
+<section class="plugin-panel">
     <h2>要点总结</h2>
-    <ul class="summary">
-        <li>prototype 中 this 指示的对象</li>
-    </ul>
-</div>
+    <div class="plugin-cont">
+        <ul class="summary">
+            <li>prototype 中 this 指示的对象</li>
+        </ul>
+    </div>
+</section>
