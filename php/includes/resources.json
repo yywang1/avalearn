@@ -40,8 +40,7 @@
             {"pageId": "13", "title": "图片播放"},
             {"pageId": "14", "title": "图片播放"},
             {"pageId": "15", "title": "图片播放"},
-            {"pageId": "16", "title": "图片播放"},
-            {"pageId": "17", "title": "浮动菜单", "status": "待修改"}
+            {"pageId": "16", "title": "图片播放"}
         ]
     },
     "css": {

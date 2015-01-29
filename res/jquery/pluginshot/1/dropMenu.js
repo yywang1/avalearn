@@ -10,11 +10,11 @@
  */
 $.fn.dropMenu = function (setting) {
     var options = $.extend({
-        "groupSelector": '.multi',
-        "group1Class": 'group1',
-        "group2Class": 'group2',
-        "menuSelector": 'ul',
-        "activeClass": 'over',
+        "groupSelector": ".multi",
+        "group1Class": "group1",
+        "group2Class": "group2",
+        "menuSelector": "ul",
+        "activeClass": "over",
         "delayTime": 0
     }, setting);
 
@@ -23,7 +23,7 @@ $.fn.dropMenu = function (setting) {
         activeGroup = false;
 
     //判断是不是PC
-    var IsPC = (function() {
+    var IsPC = (function () {
         var userAgentInfo = navigator.userAgent;
         var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
         var flag = true;
@@ -40,7 +40,7 @@ $.fn.dropMenu = function (setting) {
     function showMenu(group) {
         var group = $(group);
         var menu = group.children(options.menuSelector);
-        if(menu.is(':visible')) {
+        if (menu.is(":visible")) {
             return;
         }
 
@@ -72,14 +72,17 @@ $.fn.dropMenu = function (setting) {
             }
         }
 
-        if(IsPC) {
-            delayTimer = setTimeout(function () {
-                group.addClass(options.activeClass);
-                menu.show();
-            }, options.delayTime);
-        } else {
+        var setActive = function () {
             group.addClass(options.activeClass);
             menu.show();
+        };
+
+        if (IsPC) {
+            delayTimer = setTimeout(function () {
+                setActive();
+            }, options.delayTime);
+        } else {
+            setActive();
         }
         activeGroup = group;
     }
@@ -92,34 +95,35 @@ $.fn.dropMenu = function (setting) {
     }
 
     function hideMobileMenu(e) {
-        if(! activeGroup) {
+        if (!activeGroup) {
             return false;
         }
         var src = e ? e.target : e.srcElement;
         do {
             if (src == activeGroup.get(0)) {
                 return;
-            };
+            }
+            ;
             src = src.parentNode;
         } while (src.parentNode)
 
         hideMenu(activeGroup);
-        $(document).off('touchstart', hideMobileMenu);
+        $(document).off("touchstart", hideMobileMenu);
     }
 
     //绑定事件
-    if(IsPC) {
-        obj.on('mouseenter', options.groupSelector, function () {
+    if (IsPC) {
+        obj.on("mouseenter", options.groupSelector, function () {
             showMenu($(this));
 
-        }).on('mouseleave', options.groupSelector, function () {
+        }).on("mouseleave", options.groupSelector, function () {
             hideMenu($(this));
         });
     } else {
-        obj.on('click', options.groupSelector, function () {
-            if($(this).children(options.menuSelector).is(':hidden')) {
+        obj.on("click", options.groupSelector, function () {
+            if ($(this).children(options.menuSelector).is(":hidden")) {
                 showMenu($(this));
-                $(document).on('touchstart', hideMobileMenu);
+                $(document).on("touchstart", hideMobileMenu);
                 return false;//阻止页面跳转
             }
         });
