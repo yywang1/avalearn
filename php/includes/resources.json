@@ -42,9 +42,6 @@
             {"pageId": "15", "title": "图片播放"},
             {"pageId": "16", "title": "图片播放"},
             {"pageId": "17", "title": "浮动菜单", "status": "待修改"}
-        ],
-        "plugin": [
-            {"pageId": "1", "title": "输入框特效", "status": "待修改"}
         ]
     },
     "css": {

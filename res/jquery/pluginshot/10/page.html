@@ -10,7 +10,7 @@
 <script>
 	$(document).ready(function(){
 		var len=$(".randomUl").find("li").length;
-		var i=Math.floor(Math.random()*len);    //随机生成一个0~len-1的整数
+		var i=Math.floor(Math.random()*len);    //随机生成一个0 ~ len-1的整数
 		$(".randomUl").find("li").eq(i).show();
 	})
 </script>
@@ -23,7 +23,7 @@
         <h1>随机显示一张图片</h1>
         <div class="plugin-panel">
             <h2>效果展示</h2>
-            <div class="highlight mt3">
+            <div class="plugin-cont">
                 <div class="tip">
                     每次刷新页面，随机显示一张图片
                 </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="plugin-panel">
             <h2>代码展示</h2>
-            <div class="highlight">
+            <div class="plugin-cont">
                 <h3>HTML</h3>
                 <pre>&lt;ul class=&quot;randomUl&quot;&gt;
     &lt;li&gt;&lt;img src=&quot;../../../examples/pic1.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/li&gt;
