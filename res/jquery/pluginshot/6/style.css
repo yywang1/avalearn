@@ -2,10 +2,10 @@
 /* CSS Document */
 
 /*按钮*/
-.btnLeft, .btnRight { display:block; width:16px; height:31px; overflow:hidden; text-decoration:-1000px; background:url(../../../images/btn.gif) no-repeat; }
+.btnLeft, .btnRight { display:block; width:16px; height:31px; overflow:hidden; line-height: 200px; background:url("http://loc.avalearn.com/public/images/btn.gif") no-repeat; }
 .btnLeft { background-position:0 0; }
 .btnRight { background-position:0 -33px; }
-.btnTop, .btnBot { display:block; width:31px; height:16px; overflow:hidden; text-decoration:-1000px; background:url(../../../images/btn.gif) no-repeat; }
+.btnTop, .btnBot { display:block; width:31px; height:16px; overflow:hidden; line-height: 200px; background:url("http://loc.avalearn.com/public/images/btn.gif") no-repeat; }
 .btnTop { background-position:0 -66px; }
 .btnBot { background-position:0 -84px; }
 
