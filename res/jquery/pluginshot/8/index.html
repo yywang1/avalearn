@@ -1,111 +1,36 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>图片等比缩放(无加载中状态)</title>
-<link rel="shortcut icon" href="http://avaforvr.one.zcyj.info/favicon.ico">
-<link type="text/css" rel="stylesheet" href="../../../global.css" />
-<link type="text/css" rel="stylesheet" href="style.css" />
-<script type="text/javascript" src="{{JS_PATH}}jquery/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="imgSize.js"></script>
-<script>
-	$(document).ready(function(){
-		$(".imgList1 img").each(function(){ $(this).imgSize1({maxw:200,maxh:200}); });
-		$(".imgList2 img").each(function(){ $(this).imgSize2({maxw:200,maxh:200}); });
-		$(".imgList3 img").each(function(){ $(this).imgSize3({maxw:200}); });
-	})
-</script>
-</head>
-
-<body id="modules">
-<div class="wrapper">
-    <iframe width="960" align="center" height="125" frameborder="0" scrolling="no" src="../../../header2.html"></iframe>
-    <div class="main">
-        <h1>图片等比缩放(无加载中状态)</h1>
-        <div class="plugin-panel">
-            <h2>效果展示</h2>
-            <div class="plugin-cont">
-                <div class="tip">
-                    按最大宽度和最大高度等比缩放，图片完整显示在该区域内
-                </div>
-                <ul class="imgList1">
-                    <li><img src="{{IMG_PATH}}examples/pic8.jpg" alt="示例图片" /></li>
-                    <li><img src="{{IMG_PATH}}examples/pic10.jpg" alt="示例图片" /></li>
-                    <li><img src="http://www.sxc.hu/pic/l/b/ba/ba1969/1380119_60107345.jpg" alt="示例图片" /></li>
-                    <li><img src="{{IMG_PATH}}examples/pic9.jpg" alt="示例图片" /></li>
-                </ul>
-                <div class="tip">
-                    按最大宽度和最大高度等比缩放，图片不一定完整显示在该区域内，取中间部分显示
-                </div>
-                <ul class="imgList2">
-                    <li><img src="{{IMG_PATH}}examples/pic8.jpg" alt="示例图片" /></li>
-                    <li><img src="{{IMG_PATH}}examples/pic10.jpg" alt="示例图片" /></li>
-                    <li><img src="http://www.sxc.hu/pic/l/b/ba/ba1969/1380119_60107345.jpg" alt="示例图片" /></li>
-                    <li><img src="{{IMG_PATH}}examples/pic9.jpg" alt="示例图片" /></li>
-                </ul>
-                <div class="tip">
-                    按最大宽度等比缩放，高度不限
-                </div>
-                <ul class="imgList3">
-                    <li><img src="{{IMG_PATH}}examples/pic8.jpg" alt="示例图片" /></li>
-                    <li><img src="{{IMG_PATH}}examples/pic10.jpg" alt="示例图片" /></li>
-                    <li><img src="http://www.sxc.hu/pic/l/b/ba/ba1969/1380119_60107345.jpg" alt="示例图片" /></li>
-                    <li><img src="{{IMG_PATH}}examples/pic9.jpg" alt="示例图片" /></li>
-                </ul>
-                <div class="clear">
-                </div>
-            </div>
-        </div>
-        <div class="plugin-panel">
-            <h2>代码展示</h2>
-            <div class="plugin-cont">
-                <h3>HTML</h3>
-                <pre>&lt;ul class=&quot;imgList1&quot;&gt;
-    &lt;li&gt;&lt;img src=&quot;{{IMG_PATH}}examples/pic8.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src=&quot;{{IMG_PATH}}examples/pic10.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src=&quot;http://www.sxc.hu/pic/l/b/ba/ba1969/1380119_60107345.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src=&quot;{{IMG_PATH}}examples/pic9.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
-                <p class="note">以第一块为例，其它结构与之相同</p>
-                <h3>CSS</h3>
-                <pre>/*按最大宽度和最大高度等比缩放，图片完整显示在该区域内*/
-.imgList1 { width:100%; overflow:hidden; float:left; padding-bottom:15px; }
-.imgList1 li { width:200px; height:200px; overflow:hidden; float:left; border:solid 1px #ccc; margin-right:10px; text-align:center; }
-
-/*按最大宽度和最大高度等比缩放，图片不一定完整显示在该区域内，取中间部分显示*/
-.imgList2 { width:100%; overflow:hidden; float:left; padding-bottom:15px; }
-.imgList2 li { width:200px; height:200px; overflow:hidden; float:left; border:solid 1px #ccc; margin-right:10px; }
-
-/*按最大宽度等比缩放，高度不限*/
-.imgList3 { width:100%; overflow:hidden; float:left; }
-.imgList3 li { width:200px; overflow:hidden; float:left; border:solid 1px #ccc; margin-right:10px; text-align:center; }</pre>
-                <h3>JS</h3>
-                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;imgSize.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    $(document).ready(function(){
-        $(&quot;.imgList1 img&quot;).each(function(){ $(this).imgSize1({maxw:200,maxh:200}); });
-        $(&quot;.imgList2 img&quot;).each(function(){ $(this).imgSize2({maxw:200,maxh:200}); });
-        $(&quot;.imgList3 img&quot;).each(function(){ $(this).imgSize3({maxw:200}); });
-    })
-&lt;/script&gt;</pre>
-            </div>
-        </div>
-        <div class="plugin-panel">
-            <h2>相关文件下载</h2>
-            <ul class="download">
-                <li>jquery基本包<a href="../../../jquery-1.11.2.min.js" target="_blank">jquery-1.11.2.min.js</a></li>
-                <li>图片等比缩放js<a href="imgSize.js" target="_blank">imgSize.js</a></li>
-            </ul>
-        </div>
-        <div class="plugin-panel">
-            <h2>要点总结</h2>
-            <ul class="summary">
-                <li>读取图片的尺寸，要使用<span class="highlight">Image()</span>类，否则读取的尺寸经常出现错误；</li>
-            </ul>
-        </div>
+<h1>图片等比缩放(无加载中状态)</h1>
+<div class="plugin-panel">
+    <h2>效果展示</h2>
+    <div class="plugin-cont">
+        <link type="text/css" rel="stylesheet" href="{{res_path}}style.css" />
+        {% include sub_twig ~ 'html.html' %}
+        {% include sub_twig ~ 'js.html' %}
     </div>
-    <iframe width="960" align="center" height="47" frameborder="0" scrolling="no" src="../../../footer.html"></iframe>
 </div>
-</body>
-</html>
+<div class="plugin-panel">
+    <h2>代码展示</h2>
+    <div class="plugin-cont">
+        <h3>HTML</h3>
+        <pre>{{ source(sub_twig ~ 'html.html')|e }}</pre>
+        <h3>JS</h3>
+        <pre>{{ source(sub_twig ~ 'js.html')|e }}</pre>
+        <h3>CSS</h3>
+        <pre>{{ source(sub_twig ~ 'style.css')|e }}</pre>
+    </div>
+</div>
+<div class="plugin-panel">
+    <h2>相关文件下载</h2>
+    <div class="plugin-cont">
+        <ul class="download">
+            <li>图片等比缩放js<a href="{{res_path}}imgSize.js" target="_blank">imgSize.js</a></li>
+        </ul>
+    </div>
+</div>
+<div class="plugin-panel">
+    <h2>要点总结</h2>
+    <div class="plugin-cont">
+        <ul class="summary">
+            <li>读取图片的尺寸，要使用<span class="highlight">Image()</span>类，否则读取的尺寸经常出现错误；</li>
+        </ul>
+    </div>
+</div>

@@ -2,7 +2,7 @@
 /* CSS Document */
 
 .imgPlay { width:602px; position:relative; margin:auto; }/*图片播放*/
-.imgPlay .btnLeft, .imgPlay .btnRight { display:block; width:16px; height:31px; overflow:hidden; text-indent:-1000px; background:url(../../../images/btn.gif) no-repeat; position:absolute; bottom:34px; }
+.imgPlay .btnLeft, .imgPlay .btnRight { display:block; width:16px; height:31px; overflow:hidden; text-indent:-1000px; background:url("http://loc.avalearn.com/public/images/btn.gif") no-repeat; position:absolute; bottom:34px; }
 .imgPlay .btnLeft { background-position:0 -102px; left:7px; }
 .imgPlay .btnRight { background-position:0 -135px; right:7px; }
 .bigImg { width:600px; height:450px; overflow:hidden; border:solid 1px #ccc; }

@@ -1,84 +1,35 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>图片播放</title>
-<link rel="shortcut icon" href="http://avaforvr.one.zcyj.info/favicon.ico">
-<link type="text/css" rel="stylesheet" href="../../../global.css" />
-<link type="text/css" rel="stylesheet" href="style.css" />
-<script type="text/javascript" src="{{JS_PATH}}jquery/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="imgPlay.js"></script>
-<script>
-	$(document).ready(function(){
-		$(".imgPlay").imgPlay();
-	})
-</script>
-</head>
-
-<body id="modules">
-<div class="wrapper">
-    <iframe width="960" align="center" height="125" frameborder="0" scrolling="no" src="../../../header2.html"></iframe>
-    <div class="main">
-        <h1>图片播放</h1>
-        <div class="plugin-panel">
-            <h2>效果展示</h2>
-            <div class="plugin-cont">
-                <div class="imgPlay">
-                    <ul class="imgList">
-                        <li><img src="{{IMG_PATH}}examples/pic1.jpg" alt="示例图片" /><span>1111111111</span></li>
-                        <li><img src="{{IMG_PATH}}examples/pic2.jpg" alt="示例图片" /><span>2222222222</span></li>
-                        <li><img src="{{IMG_PATH}}examples/pic3.jpg" alt="示例图片" /><span>3333333333</span></li>
-                    </ul>
-                    <a href="javascript:void(0)" class="btnLeft">&nbsp;</a> <a href="javascript:void(0)" class="btnRight">&nbsp;</a>
-                </div>
-            </div>
-        </div>
-        <div class="plugin-panel">
-            <h2>代码展示</h2>
-            <div class="plugin-cont">
-                <h3>HTML</h3>
-                <pre>&lt;div class=&quot;imgPlay&quot;&gt;
-    &lt;ul class=&quot;imgPlayIn&quot;&gt;
-        &lt;li&gt;&lt;img src=&quot;{{IMG_PATH}}examples/pic1.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;span&gt;1111111111&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;{{IMG_PATH}}examples/pic2.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;span&gt;2222222222&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;{{IMG_PATH}}examples/pic3.jpg&quot; alt=&quot;示例图片&quot; /&gt;&lt;span&gt;3333333333&lt;/span&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;btnLeft&quot;&gt;&amp;nbsp;&lt;/a&gt; &lt;a href=&quot;javascript:void(0)&quot; class=&quot;btnRight&quot;&gt;&amp;nbsp;&lt;/a&gt;
-&lt;/div&gt;</pre>
-                <h3>CSS</h3>
-                <pre>.imgPlay { background: #397300; padding: 7px 33px; width: 600px; position: relative; margin: auto; }
-.imgPlay .btnLeft, .imgPlay .btnRight { display: block; width: 16px; height: 31px; overflow: hidden; text-indent: -1000px; background: url(../../../images/btn.gif) no-repeat; position: absolute; top: 231px; }
-.imgPlay .btnLeft { background-position: 0 0; left: 7px; }
-.imgPlay .btnRight { background-position: 0 -33px; right: 7px; }
-.imgPlay .imgList { width: 600px; height: 480px; overflow: hidden; position: relative; background: #FFF; }
-.imgPlay li { width: 600px; height: 480px; overflow: hidden; position: absolute; left: 0; top: 0; }
-.imgPlay img { display: block; width: 600px; height: 450px; vertical-align: bottom; }
-.imgPlay span { display: block; height: 30px; line-height: 30px; overflow: hidden; background: #fff; text-align: center; }</pre>
-                <h3>JS</h3>
-                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;../../../jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;imgPlay.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    $(document).ready(function(){
-        $(&quot;.imgPlay&quot;).imgPlay();
-    })
-&lt;/script&gt;</pre>
-            </div>
-        </div>
-        <div class="plugin-panel">
-            <h2>相关文件下载</h2>
-            <ul class="download">
-                <li>jquery基本包<a href="../../../jquery-1.11.2.min.js" target="_blank">jquery-1.11.2.min.js</a></li>
-                <li>图片播放js<a href="imgPlay.js" target="_blank">imgPlay.js</a></li>
-            </ul>
-        </div>
-        <div class="plugin-panel">
-            <h2>要点总结</h2>
-            <ul class="summary">
-                <li><span class="highlight">fadeIn()</span>的使用</li>
-            </ul>
-        </div>
+<div class="plugin-panel">
+    <h2>效果展示</h2>
+    <div class="plugin-cont">
+        <link type="text/css" rel="stylesheet" href="{{res_path}}style.css" />
+        {% include sub_twig ~ 'html.html' %}
+        {% include sub_twig ~ 'js.html' %}
     </div>
-    <iframe width="960" align="center" height="47" frameborder="0" scrolling="no" src="../../../footer.html"></iframe>
 </div>
-</body>
-</html>
+<div class="plugin-panel">
+    <h2>代码展示</h2>
+    <div class="plugin-cont">
+        <h3>HTML</h3>
+        <pre>{{ source(sub_twig ~ 'html.html')|e }}</pre>
+        <h3>JS</h3>
+        <pre>{{ source(sub_twig ~ 'js.html')|e }}</pre>
+        <h3>CSS</h3>
+        <pre>{{ source(sub_twig ~ 'style.css')|e }}</pre>
+    </div>
+</div>
+<div class="plugin-panel">
+    <h2>相关文件下载</h2>
+    <div class="plugin-cont">
+        <ul class="download">
+            <li>图片播放js<a href="{{res_path}}imgPlay.js" target="_blank">imgPlay.js</a></li>
+        </ul>
+    </div>
+</div>
+<div class="plugin-panel">
+    <h2>要点总结</h2>
+    <div class="plugin-cont">
+        <ul class="summary">
+            <li><span class="highlight">z-index</span> 的操作</li>
+        </ul>
+    </div>
+</div>
