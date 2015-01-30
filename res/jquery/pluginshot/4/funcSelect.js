@@ -1,6 +1,4 @@
-﻿// JavaScript Document
-
-/*下拉框
+﻿/*下拉框
 maxNum：超出这个数目时出现滚动条
 liH：下拉菜单中每个li占的高度（包含边框）
 plusW：外层标签比输入框多出的宽度

@@ -1,6 +1,4 @@
-﻿// JavaScript Document
-
-//自动 非无缝 滑动
+﻿//自动 非无缝 滑动
 $.fn.slide2=function(obj){
 	var $a=$(this).find(".slideWrap");    //可见区域
 	var $b=$(this).find(".ulCont");    //图片区域

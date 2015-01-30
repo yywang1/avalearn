@@ -1,7 +1,4 @@
-﻿// JavaScript Document
-
-//图片播放
-$.fn.imgPlay=function(obj){
+﻿$.fn.imgPlay=function(obj){
 	
 	var moveSpeed=300;    //复制图片移动速度
 	var openSpeed=300;    //图片详情展开速度

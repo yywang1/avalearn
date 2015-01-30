@@ -1,6 +1,4 @@
-﻿// JavaScript Document
-
-//横向滚动2
+﻿//横向滚动2
 $.fn.scrollLR2=function(obj){
 	var $a=$(this).find(".scrollWrap");    //可见区域
 	var $b=$(this).find(".scrollIn");    //滚动区域

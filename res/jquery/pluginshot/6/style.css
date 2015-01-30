@@ -1,6 +1,3 @@
-@charset "utf-8";
-/* CSS Document */
-
 /*按钮*/
 .btnLeft, .btnRight { display:block; width:16px; height:31px; overflow:hidden; line-height: 200px; background:url("http://loc.avalearn.com/public/images/btn.gif") no-repeat; }
 .btnLeft { background-position:0 0; }

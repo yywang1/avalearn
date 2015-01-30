@@ -1,7 +1,4 @@
-@charset "utf-8";
-/* CSS Document */
-
-.imgPlay { width:600px; height:450px; overflow:hidden; border:solid 1px #ccc; position:relative; margin:auto; }/*图片播放*/
+.imgPlay { width:600px; height:450px; overflow:hidden; border:solid 1px #ccc; position:relative; margin:auto; }
 .imgPlay .imgList, .imgPlay .imgList li, .imgPlay .imgList img { width:600px; height:450px; overflow:hidden; }
 .imgPlay .imgList li { position:absolute; left:0; top:0; }
 .imgPlay .tags { width:500px; height:20px; position:absolute; bottom:6px; right:8px; text-align:right; }

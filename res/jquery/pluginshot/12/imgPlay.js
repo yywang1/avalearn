@@ -1,7 +1,4 @@
-﻿// JavaScript Document
-
-//图片播放
-$.fn.imgPlay=function(obj){
+﻿$.fn.imgPlay=function(obj){
 	var $o=$(this);
 	var $a=$(this).find(".imgList");    //可见区域
 	var $ali=$a.find("li");

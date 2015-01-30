@@ -1,6 +1,4 @@
-﻿// JavaScript Document
-
-//向下滚动
+﻿//向下滚动
 $.fn.scrollB=function(obj){
 	var $a=$(this);    //可见区域
 	var $b=$(this).find(".scrollIn");    //滚动区域

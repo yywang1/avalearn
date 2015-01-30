@@ -1,6 +1,4 @@
-﻿// JavaScript Document
-
-//按最大宽度和最大高度等比缩放，图片完整显示在该区域内
+﻿//按最大宽度和最大高度等比缩放，图片完整显示在该区域内
 $.fn.imgSize1=function(obj){
 	var $o=$(this);
 	var t=new Image();
