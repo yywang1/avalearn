@@ -30,8 +30,9 @@
     {% endif %}
 
     {% if cat['article']|length > 0 %}
-        <ul class="textlist{{isFirstList ? ' first' : ''}}">
-            {% for page in cat['article'] %}
+        {% for group in cat['article'] %}
+            <ul class="textlist{{isFirstList ? ' first' : ''}}">
+                {% for page in group['list'] %}
                 <li>
                     <a href="{{WEB_ROOT}}article.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
                         {% if page['status'] %}
@@ -40,9 +41,10 @@
                         {{page['title']}}
                     </a>
                 </li>
-            {% endfor %}
-        </ul>
-        {% set isFirstList = false %}
+                {% endfor %}
+            </ul>
+            {% set isFirstList = false %}
+        {% endfor %}
     {% endif %}
 
     {% if cat['plugin']|length > 0 %}

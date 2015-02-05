@@ -2,18 +2,23 @@
     "javascript": {
         "title": "Javascript",
         "article": [
-            {"pageId": "1", "title": "获取鼠标坐标"},
-            {"pageId": "2", "title": "获取各种宽高及距离"},
-            {"pageId": "3", "title": "JS中对象的创建"},
-            {"pageId": "4", "title": "JS数组的操作"},
-            {"pageId": "5", "title": "弹出窗口"},
-            {"pageId": "6", "title": "JS字符串的操作"},
-            {"pageId": "7", "title": "JS代码备份"},
-            {"pageId": "8", "title": "jQuery对象与DOM对象的转换"},
-            {"pageId": "9", "title": "JS页面跳转"},
-            {"pageId": "10", "title": "JavaScript模块编程之写法"},
-            {"pageId": "11", "title": "JS代码备份"},
-            {"pageId": "12", "title": "seajs学习笔记"}
+            {
+                "group": "other",
+                "list": [
+                    {"pageId": "1", "title": "获取鼠标坐标"},
+                    {"pageId": "2", "title": "获取各种宽高及距离"},
+                    {"pageId": "3", "title": "JS中对象的创建"},
+                    {"pageId": "4", "title": "JS数组的操作"},
+                    {"pageId": "5", "title": "弹出窗口"},
+                    {"pageId": "6", "title": "JS字符串的操作"},
+                    {"pageId": "7", "title": "JS代码备份"},
+                    {"pageId": "8", "title": "jQuery对象与DOM对象的转换"},
+                    {"pageId": "9", "title": "JS页面跳转"},
+                    {"pageId": "10", "title": "JavaScript模块编程之写法"},
+                    {"pageId": "11", "title": "JS代码备份"},
+                    {"pageId": "12", "title": "seajs学习笔记"}
+                ]
+            }
         ],
         "plugin": [
             {"pageId": "1", "title": "HTML转义"},
@@ -52,37 +57,57 @@
             {"pageId": "4", "title": "用CSS3写的按钮"}
         ],
         "article": [
-            {"pageId": "1", "title": "CSS初始化"},
-            {"pageId": "2", "title": "最大最小宽度高度"},
-            {"pageId": "3", "title": "莫名奇妙的bug"},
-            {"pageId": "4", "title": "CSS框架学习"},
-            {"pageId": "5", "title": "CSS实现的各种形状"},
-            {"pageId": "6", "title": "常用CSS代码"},
-            {"pageId": "7", "title": "LESSCSS 问题整理"}
+            {
+                "group": "other",
+                "list": [
+                    {"pageId": "1", "title": "CSS初始化"},
+                    {"pageId": "2", "title": "最大最小宽度高度"},
+                    {"pageId": "3", "title": "莫名奇妙的bug"},
+                    {"pageId": "4", "title": "CSS框架学习"},
+                    {"pageId": "5", "title": "CSS实现的各种形状"},
+                    {"pageId": "6", "title": "常用CSS代码"},
+                    {"pageId": "7", "title": "LESSCSS 问题整理"}
+                ]
+            }, {
+                "group": "CSS3",
+                "list": [
+                    {"pageId": "8", "title": "CSS3学习笔记 - 边框"}
+                ]
+            }
         ]
     },
     "html": {
         "title": "HTML",
         "article": [
-            {"pageId": "1", "title": "html 特殊字符转义"},
-            {"pageId": "2", "title": "html 代码备份"},
-            {"pageId": "3", "title": "分享链接整理"}
+            {
+              "group": "other",
+              "list": [
+                  {"pageId": "1", "title": "html 特殊字符转义"},
+                  {"pageId": "2", "title": "html 代码备份"},
+                  {"pageId": "3", "title": "分享链接整理"}
+              ]
+            }
         ]
     },
     "other": {
         "title": "其它知识",
         "article": [
-            {"pageId": "1", "title": "注意修正网站注册与登录中的不良设计"},
-            {"pageId": "2", "title": "模块化——高效重构"},
-            {"pageId": "3", "title": "浏览器代理插件使用方法"},
-            {"pageId": "4", "title": "git 学习笔记（一）"},
-            {"pageId": "5", "title": "git 学习笔记（二）"},
-            {"pageId": "6", "title": "git 学习笔记（三）—— Generating SSH Keys"},
-            {"pageId": "10", "title": "git 学习笔记（四）—— difftool"},
-            {"pageId": "11", "title": "git 学习笔记（五）—— 消失的commit"},
-            {"pageId": "7", "title": "seajs + lesscss"},
-            {"pageId": "8", "title": "Sublime 使用笔记"},
-            {"pageId": "9", "title": "常用正则表达式"}
+            {
+                "group": "other",
+                "list": [
+                    {"pageId": "1", "title": "注意修正网站注册与登录中的不良设计"},
+                    {"pageId": "2", "title": "模块化——高效重构"},
+                    {"pageId": "3", "title": "浏览器代理插件使用方法"},
+                    {"pageId": "4", "title": "git 学习笔记（一）"},
+                    {"pageId": "5", "title": "git 学习笔记（二）"},
+                    {"pageId": "6", "title": "git 学习笔记（三）—— Generating SSH Keys"},
+                    {"pageId": "10", "title": "git 学习笔记（四）—— difftool"},
+                    {"pageId": "11", "title": "git 学习笔记（五）—— 消失的commit"},
+                    {"pageId": "7", "title": "seajs + lesscss"},
+                    {"pageId": "8", "title": "Sublime 使用笔记"},
+                    {"pageId": "9", "title": "常用正则表达式"}
+                ]
+            }
         ]
     }
 }

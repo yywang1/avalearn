@@ -204,26 +204,39 @@ function getResources($container) {
 
 function getPageTitle($container, $cat_name, $page_id) {
 	if(! empty($container)) {
-		//get Group Name
-		$group_name = false;
+		//get Type Name
+		$type_name = '';
 		$url = $_SERVER['REQUEST_URI'];
 		if(strpos($url, 'article.php')) {
-			$group_name = 'article';
+			$type_name = 'article';
 		} elseif(strpos($url, 'plugin.php')) {
-			$group_name = 'plugin';
+			$type_name = 'plugin';
 		} elseif(strpos($url, 'pluginshot.php')) {
-			$group_name = 'pluginshot';
+			$type_name = 'pluginshot';
 		}
 
-		if($group_name) {
+		if($type_name != '') {
 			$page_title = '';
 			$resources = getResources($container);
-			$group = $resources[$cat_name][$group_name];
-			foreach($group as $page) {
-				if($page['pageId'] === $page_id) {
-					$page_title = $page['title'];
+			$typeList = $resources[$cat_name][$type_name];
+			if($type_name == 'article') {
+				foreach($typeList as $group) {
+					foreach($group['list'] as $page) {
+						if($page['pageId'] === $page_id) {
+							$page_title = $page['title'];
+							break;
+						}
+					}
+				}
+			} else {
+				foreach($typeList as $page) {
+					if($page['pageId'] === $page_id) {
+						$page_title = $page['title'];
+						break;
+					}
 				}
 			}
+
 			return $page_title . ' - Ava is learning...';
 		}
 	}

@@ -11,7 +11,7 @@ gulp.task('default', function () {
     gulp.run('less');
 
     //监视less文件的变化
-    gulp.watch('./less/**/*.less', function () {
-        gulp.run('less');
-    });
+    //gulp.watch('./less/**/*.less', function () {
+    //    gulp.run('less');
+    //});
 });

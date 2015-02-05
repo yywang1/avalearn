@@ -5,10 +5,10 @@ $resources = getResources($container);
 
 //效果图
 foreach($resources as $catKey => $cat) {
-    foreach($cat as $groupKey => $group) {
-        if($groupKey == 'pluginshot') {
+    foreach($cat as $typeKey => $group) {
+        if($typeKey == 'pluginshot') {
             foreach($group as $pageKey => $page) {
-                $resources[$catKey][$groupKey][$pageKey]["effect"] = $container["path"]["resources"] . "{$catKey}/{$groupKey}/{$page['pageId']}/effect.gif";
+                $resources[$catKey][$typeKey][$pageKey]["effect"] = $container["path"]["resources"] . "{$catKey}/{$typeKey}/{$page['pageId']}/effect.gif";
             }
         }
     }
