@@ -595,6 +595,19 @@ h1 {
 .anchor-nav a {
   margin-right: 20px;
 }
+.effect-box {
+  margin-bottom: 20px;
+}
+.effect-box dt {
+  margin-right: 20px;
+  float: left;
+}
+.effect-box dd {
+  overflow: hidden;
+}
+.effect-box pre {
+  margin-bottom: 5px;
+}
 .plugin-panel {
   margin-bottom: 30px;
   font-size: 14px;

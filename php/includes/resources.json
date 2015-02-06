@@ -71,7 +71,8 @@
             }, {
                 "group": "CSS3",
                 "list": [
-                    {"pageId": "8", "title": "CSS3学习笔记 - 边框"}
+                    {"pageId": "8", "title": "CSS3学习笔记 - 边框"},
+                    {"pageId": "9", "title": "CSS3学习笔记 - 背景"}
                 ]
             }
         ]
