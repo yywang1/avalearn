@@ -1,6 +1,5 @@
 <style>
     .box-item {
-        clear: both;
         margin-bottom: 20px;
     }
     .box-item dt {
@@ -29,7 +28,7 @@
         width: 102px;
         height: 102px;
         overflow: hidden;
-        background-image: url("{{res_path}}images/page8_1.gif");
+        background-image: url("{{res_path}}images/8_1.gif");
         background-repeat: 0 0;
     }
     .box-item .desc1 {
@@ -37,6 +36,14 @@
     }
     .box-item .desc2 {
         background-position: 0 -102px;
+    }
+    .box-item .mr {
+        margin-right: 20px;;
+    }
+    .box-item .box-bi {
+        width: 100px;
+        height: 60px;
+        border: solid 15px #bbb;
     }
 </style>
 <h1>CSS3学习笔记 - 边框</h1>
@@ -73,7 +80,7 @@
         <div class="box" style="border-bottom-left-radius: 30px 15px;">bottom-left</div>
     </dt>
     <dd>
-        左侧赋值均为 <strong>30px 15px</strong>
+        左侧赋值均为 30px 15px，<strong>上下在前，左右在后。</strong>
     </dd>
 </dl>
 
@@ -181,3 +188,76 @@
 </dl>
 
 <h3 id="border-image">border-image 边框图片</h3>
+<pre>border-image: border-image-source border-image-slice border-image-repeat;</pre>
+
+<dl class="box-item clearfix">
+    <dt><img class="mr" src="{{res_path}}images/8_2.png" alt="边框背景图片"/></dt>
+    <dd><p>边框背景图片(80%透明度); 每个色块尺寸为30px*30px</p></dd>
+</dl>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi"></div></dt>
+    <dd><pre>width: 100px; height: 60px; border: solid 15px #bbb;</pre><p>该代码为下面容器的通用样式</p></dd>
+</dl>
+
+<h4>border-image-source: 用在边框的图片的路径</h4>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png');"></div></dt>
+    <dd><pre>border-image:url('{{res_path}}images/8_2.png');</pre><p>默认剪裁位置100%</p></dd>
+</dl>
+
+<h4>border-image-slice: 图片剪裁位置</h4>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png') 30 round;"></div></dt>
+    <dd><pre>border-image:url('{{res_path}}images/8_2.png') 30 round;</pre><p>注意：border-image-slice没有单位，专指像素；<br/>可以使用百分比，如：border-image:url('{{res_path}}images/8_2.png') 33.33% round;</p></dd>
+</dl>
+
+<dl class="box-item clearfix">
+    <dt><img class="mr" src="{{res_path}}images/8_3.gif" width="180" height="180" alt="切割原理"/></dt>
+    <dd>
+        <p>切割原理，以 border-image-slice 为 10 20 30 40 为例。<br/>按照左侧图片所示将边框背景图片切割为九个区域。<br/>效果如下：</p>
+        <dl class="box-item clearfix">
+            <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png') 10 20 30 40 round;"></div></dt>
+            <dd><pre>border-image:url('{{res_path}}images/8_2.png') 10 20 30 40 round;</pre></dd>
+        </dl>
+    </dd>
+</dl>
+
+<h4>border-image-repeat: 边框中间部分的重复类型</h4>
+<p>该属性有三个值：round（平铺）、repeat（重复）、stretch（拉伸）。</p>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png') 30 round;"></div></dt>
+    <dd><pre>border-image:url('{{res_path}}images/8_2.png') 30 round;</pre><p>round 背景重复，改变图片大小其正好在区域内显示</p></dd>
+</dl>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png') 30 repeat;"></div></dt>
+    <dd><pre>border-image:url('{{res_path}}images/8_2.png') 30 repeat;</pre><p>repeat 背景重复，不改变图片大小，边缘会截断</p></dd>
+</dl>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png') 30 stretch;"></div></dt>
+    <dd><pre>border-image:url('{{res_path}}images/8_2.png') 30 stretch;</pre><p>stretch 背景不重复，拉伸图片，充满整个区域</p></dd>
+</dl>
+
+<p>border-image-repeat 参数可以是 0~2个</p>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png') 30;"></div></dt>
+    <dd><pre>border-image:url('{{res_path}}images/8_2.png') 30;</pre><p>0个参数，即默认，效果为stretch</p></dd>
+</dl>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png') 30 round;"></div></dt>
+    <dd><pre>border-image:url('{{res_path}}images/8_2.png') 30 round;</pre><p>1个参数，水平及垂直方向均使用此参数</p></dd>
+</dl>
+<dl class="box-item clearfix">
+    <dt><div class="box box-bi" style="border-image:url('{{res_path}}images/8_2.png') 30 round stretch;"></div></dt>
+    <dd><pre>border-image:url('{{res_path}}images/8_2.png') 30 round;</pre><p>2个参数，水平方向使用第一个参数，垂直方向使用第二个参数</p></dd>
+</dl>
+
+<h4>深入理解border-image的宽度和展示方式</h4>
+<dl class="box-item clearfix">
+    <dt class="mr"><img src="{{res_path}}images/8_4.gif" alt="九宫格"/></dt>
+    <dd>
+        <p>border-image-slice 将边框背景图片切割成九个图片部分，包含左上、右上、右下、左下4个<strong>角边框图片</strong>和上右下左4个<strong>边框图片</strong>。</p>
+        <p>将容器边框也分为9个部分，与border-image一一对应，背景图片将分别填充进容器边框的相应区域。</p>
+        <p>其中4个角边框图片缩放后充满边框的4个角，类似stretch效果。</p>
+        <p>4个边框图片将按照border-image-repeat属性填充容器边框的相应区域。</p>
+    </dd>
+</dl>
