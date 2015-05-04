@@ -82,6 +82,14 @@ git commit -a -m 'remove files in **'       #提交修改</pre>
             <td>删除版本</td>
         </tr>
         <tr>
+            <td>git tag | xargs git tag -d</td>
+            <td>删除本地所有tag</td>
+        </tr>
+        <tr>
+            <td>git tag -l | xargs -n 1 git push --delete origin</td>
+            <td>删除远程所有tag</td>
+        </tr>
+        <tr>
             <td>git tag -r</td>
             <td>查看远程版本</td>
         </tr>
