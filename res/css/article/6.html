@@ -71,8 +71,13 @@ text-overflow: ellipsis;</pre>
 
 <h3>全是字母或数据组成的字符串强制换行，空格正常换行</h3>
 <pre>td {
-    word-wrap: break-word;
+    word-break:break-all;
+    word-wrap:break-word;
 }</pre>
+<p>
+word-break:break-all; /*支持IE，chrome，FF不支持*/<br/>
+word-wrap:break-word;/*支持IE，chrome，FF*/
+</p>
 
 <h3>DIV垂直居中</h3>
 <pre>&lt;div style=&quot;height: 500px;width: 500px;display: table;border: 1px solid #ccc;&quot;&gt;
