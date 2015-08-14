@@ -2,8 +2,9 @@
 include_once dirname(__DIR__) . '/includes/global.init.php';
 
 $pid = isset($_REQUEST['pid']) && $_REQUEST['pid'] ? $_REQUEST['pid'] : '';
-$cat_name = reset(explode('_', $pid));
-$page_id = end(explode('_', $pid));
+$pidArray = explode('_', $pid);
+$cat_name = reset($pidArray);
+$page_id = end($pidArray);
 
 $tplArray['title'] = getPageTitle($container, $cat_name, $page_id);
 $tplArray['sub_twig'] = "{$cat_name}/plugin/{$page_id}/";
