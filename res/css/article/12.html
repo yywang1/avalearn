@@ -178,7 +178,15 @@
 
 <section id="perspective">
     <h2>perspective 透视</h2>
-
+    <p>perspective 属性定义了3D元素距视图的距离，单位为像素。</p>
+    <p>perspective 属性有两种写法：</p>
+    <p>写法一，用在舞台元素上（动画元素们的共同父辈元素），当为舞台元素定义perspective属性时，其子元素会获得透视效果，而不是该元素自身。</p>
+    <pre>div {
+    perspective: 500;
+    -webkit-perspective: 500; /* Safari 和 Chrome */
+}</pre>
+    <p>写法二，用在当前动画元素上，与transform的其他属性写在一起。</p>
+    <pre>transform: perspective(600px) rotateY(45deg);</pre>
 </section>
 
 <section id="other">
