@@ -116,7 +116,8 @@
                     {"pageId": "3", "title": "浏览器代理插件使用方法"},
                     {"pageId": "7", "title": "seajs + lesscss"},
                     {"pageId": "8", "title": "Sublime 使用笔记"},
-                    {"pageId": "9", "title": "常用正则表达式"}
+                    {"pageId": "9", "title": "常用正则表达式"},
+                    {"pageId": "12", "title": "Fiddler在线调试JS&CSS"}
                 ]
             }
         ]
