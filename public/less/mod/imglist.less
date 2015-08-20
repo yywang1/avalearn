@@ -1,4 +1,11 @@
 .imglist {
+    border-top: dashed 1px #ccc;
+    padding: ((@space-base) - 5) 0;
+    .clearfix();
+    &.first {
+        border-top: none;
+        padding-top: 0;
+    }
     li {
         float: left;
         width: 166px;

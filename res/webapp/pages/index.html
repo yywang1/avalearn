@@ -4,32 +4,8 @@
 
     {# 第一个textlist不加边框 #}
     {% set isFirstList = true %}
-
-    {% if cat['pluginshot']|length > 0 %}
-        <ul class="imglist clearfix">
-            {% for index, page in cat['pluginshot'] %}
-                <li>
-                    <a href="{{WEB_ROOT}}pluginshot.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
-                        <img src="{{page['effect']}}" alt="查看详细">
-                        <p>
-                            {% if page['status'] %}
-                                [{{page['status']}}]
-                            {% endif %}
-                            {{page['title']}}
-                        </p>
-                    </a>
-                </li>
-                {#
-                    {% if index % 5 == 4 %}
-                        <li class="sep"></li>
-                    {% endif %}
-                 #}
-            {% endfor %}
-        </ul>
-        {% set isFirstList = false %}
-    {% endif %}
-
-    {% if cat['article']|length > 0 %}
+	
+	{% if cat['article']|length > 0 %}
         {% for group in cat['article'] %}
             <ul class="textlist{{isFirstList ? ' first' : ''}}">
                 {% for page in group['list'] %}
@@ -62,6 +38,31 @@
         </ul>
         {% set isFirstList = false %}
     {% endif %}
+
+    {% if cat['pluginshot']|length > 0 %}
+        <ul class="imglist clearfix">
+            {% for index, page in cat['pluginshot'] %}
+                <li>
+                    <a href="{{WEB_ROOT}}pluginshot.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
+                        <img src="{{page['effect']}}" alt="查看详细">
+                        <p>
+                            {% if page['status'] %}
+                                [{{page['status']}}]
+                            {% endif %}
+                            {{page['title']}}
+                        </p>
+                    </a>
+                </li>
+                {#
+                    {% if index % 5 == 4 %}
+                        <li class="sep"></li>
+                    {% endif %}
+                 #}
+            {% endfor %}
+        </ul>
+        {% set isFirstList = false %}
+    {% endif %}
+	
 </section>
 {% endfor %}
 

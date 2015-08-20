@@ -436,6 +436,29 @@ button {
   margin-right: 50px;
   color: #fff;
 }
+.imglist {
+  border-top: dashed 1px #ccc;
+  padding: 15px 0;
+  *zoom: 1;
+}
+.imglist:after {
+  content: ".";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+.imglist:after {
+  content: ".";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+.imglist.first {
+  border-top: none;
+  padding-top: 0;
+}
 .imglist li {
   float: left;
   width: 166px;
@@ -460,11 +483,23 @@ button {
   text-align: center;
 }
 .textlist {
-  display: block;
   border-top: dashed 1px #ccc;
   padding: 15px 0;
-  width: 100%;
-  overflow: hidden;
+  *zoom: 1;
+}
+.textlist:after {
+  content: ".";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+.textlist:after {
+  content: ".";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
 }
 .textlist.first {
   border-top: none;
