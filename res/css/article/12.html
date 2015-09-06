@@ -39,7 +39,9 @@
                 <li><a href="#translate">translate 移动</a></li>
                 <li><a href="#scale">scale 缩放</a></li>
                 <li><a href="#rotate">rotate 旋转</a></li>
-                <li><a href="#rotate">skew 斜切</a></li>
+                <li><a href="#skew">skew 斜切</a></li>
+                <li><a href="#matrix">matrix 2D变换矩阵</a></li>
+                <li><a href="#matrix3d">matrix3d 3D变换矩阵</a></li>
             </ul>
         </li>
         <li><a href="#transform-origin">transform-origin</a></li>
@@ -170,10 +172,55 @@
         </dl>
     </section>
 
+    <section id="matrix">
+        <hr/>
+        <h4>matrix 2D变换矩阵</h4>
+        <p></p>
+    </section>
+
+    <section id="matrix3d">
+        <hr/>
+        <h4>matrix3d 3D变换矩阵</h4>
+    </section>
+
 </section>
 
 <section id="transform-origin">
     <h2>transform-origin 改变元素转换的基点</h2>
+    <pre>transform-origin: x-axis y-axis z-axis;</pre>
+    <p>
+        x-axis 可能的值：left、center、right、length、%<br/>
+        y-axis 可能的值：top、center、bottom、length、%<br/>
+        z-axis 可能的值：length <br/>
+        默认值：50% 50% 0
+    </p>
+    <dl class="effect-box clearfix">
+        <dt><div class="box"><img style="transform: translate(10px, 10px);" src="{{res_path}}images/12_1.jpg"/></div></dt>
+        <dt><div class="box"><img style="transform: translate(10px, 10px); transform-origin: left top;" src="{{res_path}}images/12_1.jpg"/></div></dt>
+        <dd><pre>transform: translate(10px, 10px);
+transform-origin: left top;</pre>
+            <p>似乎并没有什么影响</p>
+        </dd>
+    </dl>
+    <dl class="effect-box clearfix">
+        <dt><div class="box"><img style="transform: scale(0.5, 0.5);" src="{{res_path}}images/12_1.jpg"/></div></dt>
+        <dt><div class="box"><img style="transform: scale(0.5, 0.5); transform-origin: left top;" src="{{res_path}}images/12_1.jpg"/></div></dt>
+        <dd><pre>transform: scale(0.5, 0.5);
+transform-origin: left top;</pre></dd>
+    </dl>
+    <dl class="effect-box clearfix">
+        <dt><div class="box"><img style="transform: rotate(15deg);" src="{{res_path}}images/12_1.jpg"/></div></dt>
+        <dt><div class="box"><img style="transform: rotate(15deg); transform-origin: left top;" src="{{res_path}}images/12_1.jpg"/></div></dt>
+        <dd><pre>transform: rotate(15deg);
+transform-origin: left top;</pre></dd>
+    </dl>
+    <dl class="effect-box clearfix">
+        <dt><div class="box"><img style="transform: skew(20deg, 20deg);" src="{{res_path}}images/12_1.jpg"/></div></dt>
+        <dt><div class="box"><img style="transform: skew(20deg, 20deg); transform-origin: left top;" src="{{res_path}}images/12_1.jpg"/></div></dt>
+        <dd><pre>transform: skew(20deg, 20deg);
+transform-origin: left top;</pre></dd>
+    </dl>
+
 </section>
 
 <section id="perspective">
