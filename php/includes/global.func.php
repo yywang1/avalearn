@@ -198,8 +198,21 @@ function isLogin() {
 	}
 }
 
+//获取所有配置
 function getResources($container) {
 	return json_decode(file_get_contents($container['PHP_PATH'] . 'includes/resources.json'), true);
+}
+
+//获取所有分类
+function getCategories($container) {
+    $resources = getResources($container);
+    $categories = array();
+    foreach($resources as $catKey => $cat) {
+        $categories[$catKey] = array();
+        $categories[$catKey]['title'] = $cat['title'];
+        $categories[$catKey]['url'] = $container['WEB_ROOT'] . '#' . $catKey;
+    }
+	return $categories;
 }
 
 function getPageTitle($container, $cat_name, $page_id) {
@@ -253,7 +266,8 @@ function getTplArray($container) {
 			'DEBUG_MODE' => $container['siteConf']['DEBUG_MODE'],
 			'REQUEST_URI' => urlencode($_SERVER['REQUEST_URI']),
 			'version' => $container['siteConf']['version'],
-			'title' => 'Ava is learning...'
+			'title' => 'Ava is learning...',
+			'categories' => getCategories($container)
 		);
 
     /*
