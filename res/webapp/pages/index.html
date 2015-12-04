@@ -24,7 +24,7 @@
     {% endif %}
 
     {% if cat['plugin']|length > 0 %}
-        <ul class="textlist">
+        <ul class="textlist{{isFirstList ? ' first' : ''}}">
             {% for page in cat['plugin'] %}
                 <li>
                     <a href="{{WEB_ROOT}}plugin.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
@@ -40,10 +40,10 @@
     {% endif %}
 
     {% if cat['pluginshot']|length > 0 %}
-        <ul class="imglist clearfix">
+        <ul class="imglist clearfix{{isFirstList ? ' first' : ''}}">
             {% for index, page in cat['pluginshot'] %}
                 <li>
-                    <a href="{{WEB_ROOT}}pluginshot.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
+                    <a href="{{WEB_ROOT}}{{page['isThirdParty'] ? 'tool' : 'pluginshot' }}.php?pid={{catKey}}_{{page['pageId']}}" target="_blank">
                         <img src="{{page['effect']}}" alt="查看详细">
                         <p>
                             {% if page['status'] %}

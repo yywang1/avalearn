@@ -1,18 +1,25 @@
-<!doctype html>
-<html>
-<head>
-    {% include 'webapp/common/links.html' %}
-</head>
-
-<body>
 {% spaceless %}
-    {% include 'webapp/common/header.html' %}
+    <!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>{{title}}</title>
+            <link rel="shortcut icon" href="{{WEB_ROOT}}favicon.ico">
+            {% block css %}<link type="text/css" rel="stylesheet" href="{{CSS_PATH}}global.css"/>{% endblock %}
+        </head>
 
-    <div class="container">
-        {{main | raw}}
-    </div>
+        <body>
+            {% block body %}
+                {% include 'webapp/common/header.html' %}
 
-    {% include 'webapp/common/footer.html' %}
+                <div class="container">
+                    {{main | raw}}
+                </div>
+
+                {% include 'webapp/common/footer.html' %}
+            {% endblock %}
+
+            {% block script %}{% endblock %}
+        </body>
+    </html>
 {% endspaceless %}
-</body>
-</html>

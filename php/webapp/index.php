@@ -8,7 +8,7 @@ foreach($resources as $catKey => $cat) {
     foreach($cat as $typeKey => $group) {
         if($typeKey == 'pluginshot') {
             foreach($group as $pageKey => $page) {
-                $resources[$catKey][$typeKey][$pageKey]["effect"] = $container["path"]["resources"] . "{$catKey}/{$typeKey}/{$page['pageId']}/effect.gif";
+                $resources[$catKey][$typeKey][$pageKey]["effect"] = $container["path"]["resources"] . "{$catKey}/{$typeKey}/{$page['pageId']}/effect.jpg";
             }
         }
     }
