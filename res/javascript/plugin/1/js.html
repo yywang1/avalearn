@@ -1,71 +1,29 @@
-<script src="{{JS_PATH}}ZeroClipboard/ZeroClipboard.js"></script>
-<script src="{{JS_PATH}}format/htmlformat.js"></script>
-<script src="{{JS_PATH}}format/jsformat.js"></script>
 <script>
-    //复制转义结果 + 初始化复制对象
-    (function initCopyResult() {
-        var clip = new ZeroClipboard(document.getElementById("btnCopy"), {
-            moviePath: "{{JS_PATH}}ZeroClipboard/ZeroClipboard.swf",
-        });
-        clip.setText(result.value);
-        clip.setHandCursor(true);
-        clip.addEventListener('mouseup', function (client) {
-            clip.setText( result.value );
-        });
-        clip.addEventListener('complete', function (client, text) {
-            alert("该地址已经复制，你可以使用Ctrl+V 粘贴。");
-        });
-    })();
-
-    //清空textarea，转义前textarea获取焦点
-    function clearData() {
-        document.getElementById("original").value = "";
-        var result = document.getElementById("result");
-        result.value = "";
-        original.focus();
-    }
-
-    //格式化转义前代码
-    function doFormat(originalTxt) {
-        js_source = originalTxt.replace(/^\s+/, '');
-        tabsize = 4;
-        tabchar = ' ';
-        if (tabsize == 1) {
-            tabchar = '\t';
-        }
-        if (js_source && js_source.charAt(0) === '<') {
-            return style_html(js_source, tabsize, tabchar, 80);
+    window.onload = function myGetDate() {
+        var date = new Date(); //创建Date()对象
+        var week = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"); //创建星期数组
+        var now = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日 " + week[date.getDay()] + " " + date.getHours() + "时" + date.getMinutes() + "分" + date.getSeconds() + "秒";
+        var greet = ''; //问候语
+        var hour = date.getHours();
+        if (hour < 6) {
+            greet = "凌晨好！";
+        } else if (hour < 9) {
+            greet = "早上好！";
+        } else if (hour < 12) {
+            greet = "上午好！";
+        } else if (hour < 14) {
+            greet = "中午好！";
+        } else if (hour < 17) {
+            greet = "下午好！";
+        } else if (hour < 19) {
+            greet = "傍晚好！";
+        } else if (hour < 22) {
+            greet = "晚上好！";
         } else {
-            return js_beautify(js_source, tabsize, tabchar);
+            greet = "夜里好！";
         }
-    }
 
-    //转义
-    function doEscape(originalTxt) {
-        return originalTxt
-                .replace(/&/g, '&amp;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#39;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/\\/g, '&#92;');
-
-    }
-
-    //格式化并转义
-    function formatAndEscape() {
-        var original = document.getElementById("original");
-        var result = document.getElementById("result");
-        var str = original.value;
-        if(str.length < 1) {
-            return false;
-        }
-        if(document.getElementById("format").checked) {
-            str = doFormat(str); //格式化
-        }
-        console.log(str);
-        str = doEscape(str); //转义
-        console.log(str);
-        result.value = str;
-    }
+        document.getElementById("date").innerHTML = greet + "现在是 " + now;
+        setTimeout(myGetDate, 1000);
+    };
 </script>

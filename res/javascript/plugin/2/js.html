@@ -1,29 +1,49 @@
 <script>
-    window.onload = function myGetDate() {
-        var date = new Date(); //创建Date()对象
-        var week = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"); //创建星期数组
-        var now = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日 " + week[date.getDay()] + " " + date.getHours() + "时" + date.getMinutes() + "分" + date.getSeconds() + "秒";
-        var greet = ''; //问候语
-        var hour = date.getHours();
-        if (hour < 6) {
-            greet = "凌晨好！";
-        } else if (hour < 9) {
-            greet = "早上好！";
-        } else if (hour < 12) {
-            greet = "上午好！";
-        } else if (hour < 14) {
-            greet = "中午好！";
-        } else if (hour < 17) {
-            greet = "下午好！";
-        } else if (hour < 19) {
-            greet = "傍晚好！";
-        } else if (hour < 22) {
-            greet = "晚上好！";
-        } else {
-            greet = "夜里好！";
+    function Timer(endTime, htmlElemId) {
+        this.endTime = endTime;
+        this.isEnd = false; //倒计时是否已结束
+        this.htmlElem = document.getElementById(htmlElemId);
+    }
+    Timer.prototype = {
+        start: function () {
+            return new Date();
+        },
+        end: function () {
+            return new Date(this.endTime);
+        },
+        init: function () {
+            var offsetm = this.end() - this.start();
+            if (offsetm <= 0) {
+                this.isEnd = true;
+            } else {
+                this.isEnd = false;
+                this.days = Math.floor(offsetm / (1000 * 60 * 60 * 24));
+                offsetm = offsetm - this.days * 1000 * 60 * 60 * 24;
+                this.hours = Math.floor(offsetm / (1000 * 60 * 60));
+                offsetm = offsetm - this.hours * 1000 * 60 * 60;
+                this.mins = Math.floor(offsetm / (1000 * 60));
+                offsetm = offsetm - this.mins * 1000 * 60;
+                this.seconds = Math.floor(offsetm / 1000);
+            }
+        },
+        run: function () {
+            var _self = this;
+            setInterval(function () {
+                _self.init();
+                _self.print();
+            }, 1000);
+        },
+        print: function () {
+            if (this.isEnd) {
+                this.htmlElem.innerHTML = '距离 ' + this.endTime + ' 倒计时已结束';
+            } else {
+                this.htmlElem.innerHTML = '距离 ' + this.endTime + ' 还有 ' + this.days + ' 天 ' + this.hours + ' 时 ' + this.mins + ' 分 ' + this.seconds + ' 秒';
+            }
         }
-
-        document.getElementById("date").innerHTML = greet + "现在是 " + now;
-        setTimeout(myGetDate, 1000);
     };
+
+    var t = new Timer('2013-12-25', 'countdown');
+    t.run();
+    var t2 = new Timer('2020-12-25', 'countdown2');
+    t2.run();
 </script>
