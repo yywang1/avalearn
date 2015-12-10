@@ -46,8 +46,12 @@ git commit -a -m 'remove files in **'       #提交修改</pre>
             <td>合并[branchname]到当前分支</td>
         </tr>
         <tr>
-            <td>git merge –no-ff [branchname]</td>
+            <td>git merge -–no-ff [branchname]</td>
             <td>合并[branchname]到当前分支，–no-ff 标记会使合并永远创建一个新的commit对象，即使该合并能以fast-forward的方式进行。这么做可以避免丢失特性分支存在的历史信息，同时也能清晰的展现一组commit一起构成一个特性。这么做会造成一些（空的）commit对象，但这么做是利大于弊的。</td>
+        </tr>
+        <tr>
+            <td>git merge --squash [branchname]</td>
+            <td>合并[branchname]到当前分支，把多次分支commit历史压缩为一次，不保留历史commit。</td>
         </tr>
         <tr>
             <td>git branch -d [branchname]</td>
