@@ -1,15 +1,6 @@
-input[type="text"], input[type="password"], textarea, select {
-    padding: 10px;
-    border: solid 1px #CCC;
-    background: #F7F7F7;
-    border-color: #ddd #aaa #aaa #ddd;
-    width: 100%;
-    line-height: 20px;
-}
-textarea {
-    height: 100px;
-}
-button {
+.btn {
+    display: inline-block;
+    vertical-align: top;
     padding: 9px 20px;
     background: #27931b;
     border: solid 1px #238a18;
@@ -19,10 +10,19 @@ button {
     cursor: pointer;
 }
 .form-a {
+    input[type="text"], input[type="password"], textarea, select {
+        vertical-align: top;
+        padding: 10px;
+        border: solid 1px #CCC;
+        background: #F7F7F7;
+        border-color: #ddd #aaa #aaa #ddd;
+        width: 100%;
+        line-height: 20px;
+    }
+    textarea {
+        height: 100px;
+    }
     li {
         margin-bottom: 15px;
-    }
-    button {
-        margin: 0 20px;
     }
 }

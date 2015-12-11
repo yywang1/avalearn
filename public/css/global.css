@@ -334,21 +334,9 @@ hr {
   visibility: hidden;
   display: block;
 }
-input[type="text"],
-input[type="password"],
-textarea,
-select {
-  padding: 10px;
-  border: solid 1px #CCC;
-  background: #F7F7F7;
-  border-color: #ddd #aaa #aaa #ddd;
-  width: 100%;
-  line-height: 20px;
-}
-textarea {
-  height: 100px;
-}
-button {
+.btn {
+  display: inline-block;
+  vertical-align: top;
   padding: 9px 20px;
   background: #27931b;
   border: solid 1px #238a18;
@@ -357,11 +345,23 @@ button {
   font: bold 14px/18px Verdana, Geneva, sans-serif;
   cursor: pointer;
 }
+.form-a input[type="text"],
+.form-a input[type="password"],
+.form-a textarea,
+.form-a select {
+  vertical-align: top;
+  padding: 10px;
+  border: solid 1px #CCC;
+  background: #F7F7F7;
+  border-color: #ddd #aaa #aaa #ddd;
+  width: 100%;
+  line-height: 20px;
+}
+.form-a textarea {
+  height: 100px;
+}
 .form-a li {
   margin-bottom: 15px;
-}
-.form-a button {
-  margin: 0 20px;
 }
 .header {
   margin-bottom: 20px;
