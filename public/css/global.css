@@ -366,8 +366,6 @@ hr {
 .header {
   margin-bottom: 20px;
   background: #272727;
-  line-height: 40px;
-  white-space: nowrap;
   background-color: #292929;
   background-image: -webkit-linear-gradient(top, #323232, #202020);
   background-image: -moz-linear-gradient(top, #323232, #202020);
@@ -378,26 +376,45 @@ hr {
 .logo {
   float: left;
   padding: 0 15px;
-  display: inline-block;
+  display: block;
   background: #3a3a3a;
   color: #fff;
   font-size: 14px;
   text-decoration: none;
+  line-height: 40px;
 }
 .logo:hover {
   background: #454545;
   text-decoration: none;
 }
+@media screen and (max-width: 680px) {
+  .logo {
+    float: none;
+    text-align: center;
+  }
+}
 .header-nav {
   float: right;
+  padding: 6px 0;
+  line-height: 2;
 }
 .header-nav a {
-  margin-left: 20px;
+  margin-right: 20px;
   color: #ddd;
   font-size: 14px;
+  white-space: nowrap;
 }
 .header-nav a:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 680px) {
+  .header-nav {
+    float: none;
+    padding-left: 20px;
+  }
+  .header-nav a {
+    float: left;
+  }
 }
 .footer {
   padding: 0 0 20px;
@@ -436,6 +453,12 @@ hr {
   margin-right: 50px;
   color: #fff;
 }
+@media screen and (max-width: 680px) {
+  .friendlink a {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
 .imglist {
   border-top: dashed 1px #ccc;
   padding: 15px 0;
@@ -464,7 +487,21 @@ hr {
   width: 166px;
   height: 196px;
   overflow: hidden;
-  margin: 0 10px 15px;
+  padding: 0 10px 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 680px) {
+  .imglist li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 340px) {
+  .imglist li {
+    width: 100%;
+  }
 }
 .imglist img {
   width: 164px;

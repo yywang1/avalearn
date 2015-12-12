@@ -11,7 +11,14 @@
         width: 166px;
         height: 196px;
         overflow: hidden;
-        margin: 0 10px 15px;
+        padding: 0 10px 15px;
+        .box-sizing(border-box);
+        @media screen and (max-width: 680px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 340px) {
+            width: 100%;
+        }
 //        &.sep {
 //            clear: both;
 //            width: 100%;
