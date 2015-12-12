@@ -31,11 +31,11 @@
                     {"pageId": "14", "title": "CSS3学习笔记 - 动画"},
                     {"pageId": "15", "title": "CSS3学习笔记 - 界面"},
                     {"pageId": "16", "title": "CSS3学习笔记 - 颜色", "status": "木有"},
-                    {"pageId": "17", "title": "CSS3学习笔记 - 字体", "status": "进行中"}
+                    {"pageId": "17", "title": "CSS3学习笔记 - 字体"}
                 ],
                 "relevant": [
                     {"pageId": "17_1", "title": "Font Squirrel", "status": "进行中"},
-                    {"pageId": "17_2", "title": "Bulletproof", "status": "进行中"}
+                    {"pageId": "17_2", "title": "Bulletproof @font-face Syntax", "status": "进行中"}
                 ]
             }
         ]
