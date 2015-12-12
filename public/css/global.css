@@ -484,8 +484,8 @@ hr {
 }
 .imglist li {
   float: left;
-  width: 166px;
-  height: 196px;
+  width: 25%;
+  height: 211px;
   overflow: hidden;
   padding: 0 10px 15px;
   -webkit-box-sizing: border-box;
