@@ -9,9 +9,10 @@
     li {
         float: left;
         width: 25%;
-        height: 211px;
+        height: 216px;
         overflow: hidden;
-        padding: 0 10px 15px;
+        padding: 0 (@space / 2);
+        margin-bottom: @space;
         .box-sizing(border-box);
         @media screen and (max-width: 680px) {
             width: 50%;
@@ -28,6 +29,7 @@
 //        }
     }
     img {
+        margin-bottom: (@space / 2);
         width: 164px;
         height: 164px;
         border: dashed 1px #fff;

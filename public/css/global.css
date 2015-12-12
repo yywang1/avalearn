@@ -485,9 +485,10 @@ hr {
 .imglist li {
   float: left;
   width: 25%;
-  height: 211px;
+  height: 216px;
   overflow: hidden;
-  padding: 0 10px 15px;
+  padding: 0 10px;
+  margin-bottom: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -504,6 +505,7 @@ hr {
   }
 }
 .imglist img {
+  margin-bottom: 10px;
   width: 164px;
   height: 164px;
   border: dashed 1px #fff;
