@@ -1,10 +1,6 @@
 <?
 include_once dirname(__DIR__) . '/includes/global.init.php';
-
-$pid = isset($_REQUEST['pid']) && $_REQUEST['pid'] ? $_REQUEST['pid'] : '';
-$pidArray = explode('_', $pid);
-$cat_name = reset($pidArray);
-$page_id = end($pidArray);
+include_once dirname(__DIR__) . '/webapp/snippets/pid.php';
 
 $tplArray['title'] = getPageTitle($container, $cat_name, $page_id);
 $tplArray['res_path'] = $container['WEB_ROOT'] . "res/{$cat_name}/article/";

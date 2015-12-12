@@ -422,7 +422,7 @@ hr {
 .friendlink h2 {
   margin-bottom: 10px;
   border-bottom: solid 1px #7e7e7e;
-  padding-bottom: 5px 0 0;
+  padding: 5px 0 0;
 }
 .friendlink h2 span {
   display: block;
@@ -501,7 +501,8 @@ hr {
   visibility: hidden;
   display: block;
 }
-.textlist.first {
+.textlist.first,
+.textlist.relevant {
   border-top: none;
   padding-top: 0;
 }

@@ -19,6 +19,22 @@
                 </li>
                 {% endfor %}
             </ul>
+
+            {% if group['relevant'] %}
+                <ul class="textlist relevant">
+                    {% for page in group['relevant'] %}
+                    <li>
+                        <a href="{{WEB_ROOT}}article.php?pid={{catKey}}_{{page['pageId']}}">
+                            {% if page['status'] %}
+                            <span>[{{page['status']}}]</span>
+                            {% endif %}
+                            {{page['title']}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
             {% set isFirstList = false %}
         {% endfor %}
     {% endif %}
