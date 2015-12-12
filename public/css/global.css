@@ -400,7 +400,7 @@ hr {
   text-decoration: underline;
 }
 .footer {
-  padding: 0 0 10px;
+  padding: 0 0 20px;
   text-align: center;
   color: #666;
 }
@@ -417,7 +417,7 @@ hr {
   background-image: -o-linear-gradient(top, #6e6e6e, #6a6a6a);
   background-image: -ms-linear-gradient(top, #6e6e6e, #6a6a6a);
   background-image: linear-gradient(top, #6e6e6e, #6a6a6a);
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 .friendlink h2 {
   margin-bottom: 10px;
