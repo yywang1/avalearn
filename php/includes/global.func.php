@@ -240,6 +240,14 @@ function getPageTitle($container, $cat_name, $page_id) {
 							break;
 						}
 					}
+					if($page_title == '' && array_key_exists('relevant', $group)) {
+						foreach($group['relevant'] as $page) {
+							if($page['pageId'] === $page_id) {
+								$page_title = $page['title'];
+								break;
+							}
+						}
+					}
 				}
 			} else {
 				foreach($typeList as $page) {
