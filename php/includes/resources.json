@@ -34,8 +34,7 @@
                     {"pageId": "17", "title": "CSS3学习笔记 - 字体"}
                 ],
                 "relevant": [
-                    {"pageId": "17_1", "title": "Font Squirrel", "status": "进行中"},
-                    {"pageId": "17_2", "title": "Bulletproof @font-face Syntax", "status": "进行中"}
+                    {"pageId": "17_1", "title": "Font Squirrel"}
                 ]
             }
         ]
