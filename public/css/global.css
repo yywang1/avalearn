@@ -344,6 +344,22 @@ hr {
   color: #fff;
   font: bold 14px/18px Verdana, Geneva, sans-serif;
   cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+.input {
+  vertical-align: top;
+  padding: 10px;
+  border: solid 1px #CCC;
+  background: #F7F7F7;
+  border-color: #ddd #aaa #aaa #ddd;
+  line-height: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
 }
 .form-a input[type="text"],
 .form-a input[type="password"],
@@ -354,8 +370,12 @@ hr {
   border: solid 1px #CCC;
   background: #F7F7F7;
   border-color: #ddd #aaa #aaa #ddd;
-  width: 100%;
   line-height: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  width: 100%;
 }
 .form-a textarea {
   height: 100px;

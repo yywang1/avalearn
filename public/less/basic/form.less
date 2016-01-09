@@ -8,16 +8,21 @@
     color: #fff;
     font: bold 14px/18px Verdana, Geneva, sans-serif;
     cursor: pointer;
+    .border-radius(3px);
+}
+.input {
+    vertical-align: top;
+    padding: 10px;
+    border: solid 1px #CCC;
+    background: #F7F7F7;
+    border-color: #ddd #aaa #aaa #ddd;
+    line-height: 20px;
+    .border-radius(3px);
 }
 .form-a {
     input[type="text"], input[type="password"], textarea, select {
-        vertical-align: top;
-        padding: 10px;
-        border: solid 1px #CCC;
-        background: #F7F7F7;
-        border-color: #ddd #aaa #aaa #ddd;
+        .input;
         width: 100%;
-        line-height: 20px;
     }
     textarea {
         height: 100px;

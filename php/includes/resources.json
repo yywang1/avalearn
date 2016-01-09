@@ -11,13 +11,13 @@
             {
                 "group": "other",
                 "list": [
-                    {"pageId": "1", "title": "CSS初始化"},
+                    {"pageId": "1", "title": "常用CSS代码"},
+                    {"pageId": "6", "title": "CSS初始化"},
                     {"pageId": "2", "title": "最大最小宽度高度"},
                     {"pageId": "3", "title": "莫名奇妙的bug"},
                     {"pageId": "4", "title": "CSS框架学习"},
                     {"pageId": "5", "title": "CSS实现的各种形状"},
-                    {"pageId": "6", "title": "常用CSS代码"},
-                    {"pageId": "7", "title": "LESSCSS 问题整理"}
+                    {"pageId": "7", "title": "LESSCSS 学习笔记", "status": "进行中"}
                 ]
             }, {
                 "group": "CSS3",
@@ -25,13 +25,14 @@
                     {"pageId": "11", "title": "CSS3学习笔记 - 选择器", "status": "进行中"},
                     {"pageId": "8", "title": "CSS3学习笔记 - 边框"},
                     {"pageId": "9", "title": "CSS3学习笔记 - 背景"},
+                    {"pageId": "16", "title": "CSS3学习笔记 - 渐变", "status": "进行中"},
                     {"pageId": "10", "title": "CSS3学习笔记 - 文本"},
                     {"pageId": "12", "title": "CSS3学习笔记 - 转换", "status": "进行中"},
                     {"pageId": "13", "title": "CSS3学习笔记 - 过渡"},
                     {"pageId": "14", "title": "CSS3学习笔记 - 动画"},
                     {"pageId": "15", "title": "CSS3学习笔记 - 界面"},
-                    {"pageId": "16", "title": "CSS3学习笔记 - 颜色", "status": "木有"},
-                    {"pageId": "17", "title": "CSS3学习笔记 - 字体"}
+                    {"pageId": "17", "title": "CSS3学习笔记 - 字体"},
+                    {"pageId": "18", "title": "CSS3学习笔记 - 颜色", "status": "木有"}
                 ],
                 "relevant": [
                     {"pageId": "17_1", "title": "Font Squirrel"}
@@ -45,8 +46,8 @@
             {
               "group": "other",
               "list": [
-                  {"pageId": "1", "title": "html 特殊字符转义"},
-                  {"pageId": "2", "title": "html 代码备份"},
+                  {"pageId": "1", "title": "html 代码备份"},
+                  {"pageId": "2", "title": "html 特殊字符转义"},
                   {"pageId": "3", "title": "分享链接整理"}
               ]
             }
@@ -58,25 +59,24 @@
             {
                 "group": "other",
                 "list": [
-                    {"pageId": "1", "title": "获取鼠标坐标"},
+                    {"pageId": "1", "title": "JS代码备份"},
                     {"pageId": "2", "title": "获取各种宽高及距离"},
                     {"pageId": "3", "title": "JS中对象的创建"},
                     {"pageId": "4", "title": "JS数组的操作"},
                     {"pageId": "5", "title": "弹出窗口"},
                     {"pageId": "6", "title": "JS字符串的操作"},
-                    {"pageId": "7", "title": "JS代码备份"},
+                    {"pageId": "7", "title": "获取鼠标坐标"},
                     {"pageId": "8", "title": "jQuery对象与DOM对象的转换"},
                     {"pageId": "9", "title": "JS页面跳转"},
-                    {"pageId": "10", "title": "JavaScript模块编程之写法"},
-                    {"pageId": "11", "title": "JS代码备份"},
-                    {"pageId": "12", "title": "seajs学习笔记"}
+                    {"pageId": "10", "title": "JavaScript模块编程之写法"}
                 ]
             }
         ],
         "plugin": [
             {"pageId": "1", "title": "问候语+时钟"},
             {"pageId": "2", "title": "倒计时"},
-            {"pageId": "3", "title": "输入框对象练习"}
+            {"pageId": "3", "title": "输入框对象练习"},
+            {"pageId": "4", "title": "事件绑定和移除"}
         ],
         "pluginshot": [
             {"pageId": "1", "title": "多级下拉导航"},
