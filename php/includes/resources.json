@@ -18,7 +18,8 @@
                     {"pageId": "4", "title": "CSS框架学习"},
                     {"pageId": "5", "title": "CSS实现的各种形状"},
                     {"pageId": "7", "title": "LESSCSS 学习笔记", "status": "进行中"},
-                    {"pageId": "18", "title": "CSS负边距"}
+                    {"pageId": "18", "title": "自适应两栏和三栏布局"},
+                    {"pageId": "19", "title": "CSS负边距"}
                 ]
             }, {
                 "group": "CSS3",

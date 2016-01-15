@@ -732,6 +732,13 @@ h1 {
 .effect-box pre {
   margin-bottom: 5px;
 }
+.collapse-code {
+  margin: 10px 0 20px;
+}
+.collapse-code dt {
+  margin-bottom: 10px;
+  text-align: center;
+}
 .plugin-panel {
   margin-bottom: 30px;
   font-size: 14px;
