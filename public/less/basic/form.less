@@ -6,9 +6,17 @@
     border: solid 1px #238a18;
     border-color: #238a18 #1e7f13 #1e7f13 #238a18;
     color: #fff;
-    font: bold 14px/18px Verdana, Geneva, sans-serif;
+    font: bold 14px/18px @font-family-verdana;
     cursor: pointer;
     .border-radius(3px);
+}
+.btn-white {
+    .btn;
+    background: #fff;
+    border: solid 1px #ccc;
+    color: @gray-dark;
+    font: normal 14px/18px @font-family-verdana;
+
 }
 .input {
     vertical-align: top;

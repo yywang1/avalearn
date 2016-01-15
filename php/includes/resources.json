@@ -17,7 +17,8 @@
                     {"pageId": "3", "title": "莫名奇妙的bug"},
                     {"pageId": "4", "title": "CSS框架学习"},
                     {"pageId": "5", "title": "CSS实现的各种形状"},
-                    {"pageId": "7", "title": "LESSCSS 学习笔记", "status": "进行中"}
+                    {"pageId": "7", "title": "LESSCSS 学习笔记", "status": "进行中"},
+                    {"pageId": "18", "title": "CSS负边距"}
                 ]
             }, {
                 "group": "CSS3",
@@ -68,7 +69,8 @@
                     {"pageId": "7", "title": "获取鼠标坐标"},
                     {"pageId": "8", "title": "jQuery对象与DOM对象的转换"},
                     {"pageId": "9", "title": "JS页面跳转"},
-                    {"pageId": "10", "title": "JavaScript模块编程之写法"}
+                    {"pageId": "10", "title": "JavaScript模块编程之写法"},
+                    {"pageId": "11", "title": "指定js文件加载完成后执行回调函数", "status": "进行中"}
                 ]
             }
         ],
